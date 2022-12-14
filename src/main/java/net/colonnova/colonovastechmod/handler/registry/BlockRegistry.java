@@ -1,5 +1,6 @@
 package net.colonnova.colonovastechmod.handler.registry;
 
+import net.colonnova.colonovastechmod.block.*;
 import net.colonnova.colonovastechmod.block.ore.*;
 import net.colonnova.colonovastechmod.util.Reference;
 
@@ -31,6 +32,16 @@ public class BlockRegistry
     public static final RegistryObject<Block> DEEP_SLATE_SILVER_ORE = BLOCKS.register("deepslate_silver_ore", BlockSilverOre::new);
     public static final RegistryObject<Block> DEEP_SLATE_TIN_ORE = BLOCKS.register("deepslate_tin_ore", BlockTinOre::new);
     public static final RegistryObject<Block> DEEP_SLATE_URANIUM_ORE = BLOCKS.register("deepslate_uranium_ore", BlockUraniumOre::new);
+
+    public static final RegistryObject<Block> ALUMINIUM_BLOCK = BLOCKS.register("aluminium_block", BlockAluminiumBlock::new);
+    public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", BlockCopperBlock::new);
+    public static final RegistryObject<Block> IRIDIUM_BLOCK = BLOCKS.register("iridium_block", BlockIridiumBlock::new);
+    public static final RegistryObject<Block> LEAD_BLOCK = BLOCKS.register("lead_block",  BlockLeadBlock::new);
+    public static final RegistryObject<Block> NICKEL_BLOCK = BLOCKS.register("nickel_block", BlockNickelBlock::new);
+    public static final RegistryObject<Block> PLATINUM_BLOCK = BLOCKS.register("platinum_block", BlockPlatinumBlock::new);
+    public static final RegistryObject<Block> SILVER_BLOCK = BLOCKS.register("silver_block", BlockSilverBlock::new);
+    public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", BlockTinBlock::new);
+    public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", BlockUraniumBlock::new);
 
     public static void registerBlocks()
     {
