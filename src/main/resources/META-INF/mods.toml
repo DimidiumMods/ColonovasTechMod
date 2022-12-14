@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All rights reserved"
+[[mods]]
+    modId="colonovastechmod"
+    version="${file.jarVersion}}"
+    displayName="ColonovasTechMod"
+    credits="Colonova"
+    authors="Colonova"
+    description='''A tech mod for Mineecraft 1.19 and beyond!'''
+[[dependencies.colonovastechmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.colonovastechmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.19.3)"
+    ordering="NONE"
+    side="BOTH"
