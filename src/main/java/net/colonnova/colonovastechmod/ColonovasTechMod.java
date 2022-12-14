@@ -1,6 +1,8 @@
-package net.colonova.colonovastechmod;
+package net.colonnova.colonovastechmod;
 
-import net.colonova.colonovastechmod.util.Reference;
+import net.colonnova.colonovastechmod.handler.registry.BlockRegistry;
+import net.colonnova.colonovastechmod.handler.registry.ItrmRegistry;
+import net.colonnova.colonovastechmod.util.Reference;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -20,6 +22,9 @@ public class ColonovasTechMod
 
     public ColonovasTechMod()
     {
+        BlockRegistry.registerBlocks();
+        ItrmRegistry.registerItems();
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
