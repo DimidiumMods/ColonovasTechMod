@@ -1,6 +1,7 @@
 package net.colonova.colonovastechmod;
 
 import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
+import net.colonova.colonovastechmod.handler.registry.EffectRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
@@ -23,6 +24,7 @@ public class ColonovasTechMod
     public ColonovasTechMod()
     {
         BlockRegistry.registerBlocks();
+        EffectRegistry.registerEffects();
         ItemRegistry.registerItems();
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

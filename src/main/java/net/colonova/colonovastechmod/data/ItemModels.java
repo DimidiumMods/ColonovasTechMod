@@ -72,5 +72,10 @@ public class ItemModels extends ItemModelProvider
         singleTexture(ItemRegistry.SILVER_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/silver_nugget"));
         singleTexture(ItemRegistry.TIN_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/tin_nugget"));
         singleTexture(ItemRegistry.URANIUM_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/uranium_nugget"));
+
+        singleTexture(ItemRegistry.RADIATION_SUIT_HELMET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_helmet"));
+        singleTexture(ItemRegistry.RADIATION_SUIT_CHESTPLATE.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_chestplate"));
+        singleTexture(ItemRegistry.RADIATION_SUIT_LEGGINGS.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_leggings"));
+        singleTexture(ItemRegistry.RADIATION_SUIT_BOOTS.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_boots"));
     }
 }

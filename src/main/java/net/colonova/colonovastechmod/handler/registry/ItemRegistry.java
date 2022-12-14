@@ -1,5 +1,6 @@
 package net.colonova.colonovastechmod.handler.registry;
 
+import net.colonova.colonovastechmod.item.armor.*;
 import net.colonova.colonovastechmod.item.gear.*;
 import net.colonova.colonovastechmod.item.ingot.*;
 import net.colonova.colonovastechmod.item.nugget.*;
@@ -86,6 +87,11 @@ public class ItemRegistry
     public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget", ItemSilverNugget::new);
     public static final RegistryObject<Item> TIN_NUGGET = ITEMS.register("tin_nugget", ItemTinNugget::new);
     public static final RegistryObject<Item> URANIUM_NUGGET = ITEMS.register("uranium_nugget", ItemUraniumNugget::new);
+
+    public static final RegistryObject<Item> RADIATION_SUIT_HELMET = ITEMS.register("radiation_suit_helmet", ItemRadiationSuitHelmet::new);
+    public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE = ITEMS.register("radiation_suit_chestplate", ItemRadiationSuitChestplate::new);
+    public static final RegistryObject<Item> RADIATION_SUIT_LEGGINGS = ITEMS.register("radiation_suit_leggings", ItemRadiationSuitLeggings::new);
+    public static final RegistryObject<Item> RADIATION_SUIT_BOOTS = ITEMS.register("radiation_suit_boots", ItemRadiationSuitBoots::new);
 
     public static void registerItems()
     {
