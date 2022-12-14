@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:deepslate_iridium_ore"
+        }
+      ],
+      "name": "deep_slate_iridium_ore",
+      "rolls": 1.0
+    }
+  ]
+}

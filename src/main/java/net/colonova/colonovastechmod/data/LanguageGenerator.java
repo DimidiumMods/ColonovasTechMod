@@ -1,6 +1,7 @@
 package net.colonova.colonovastechmod.data;
 
 import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
+import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
 import net.minecraft.data.DataGenerator;
@@ -17,6 +18,7 @@ public class LanguageGenerator extends LanguageProvider
     protected void addTranslations()
     {
         add("itemGroup." + Reference.MOD_ID + ".tab.blocks", "ColonovasTechMod: Blocks");
+        add("itemGroup." + Reference.MOD_ID + ".tab.items", "ColonovasTechMod: Items");
 
         add(BlockRegistry.ALUMINIUM_ORE.get(), "Aluminium Ore");
         add(BlockRegistry.COPPER_ORE.get(), "Copper Ore");
@@ -46,6 +48,36 @@ public class LanguageGenerator extends LanguageProvider
         add(BlockRegistry.SILVER_BLOCK.get(), "Silver Block");
         add(BlockRegistry.TIN_BLOCK.get(), "Tin Block");
         add(BlockRegistry.URANIUM_BLOCK.get(), "Uranium Block");
+
+        add(ItemRegistry.ALUMINIUM_GEAR.get(), "Aluminium Gear");
+        add(ItemRegistry.COPPER_GEAR.get(), "Copper Gear");
+        add(ItemRegistry.IRIDIUM_GEAR.get(), "Iridium Gear");
+        add(ItemRegistry.LEAD_GEAR.get(), "Lead Gear");
+        add(ItemRegistry.NICKEL_GEAR.get(), "Nickel Gear");
+        add(ItemRegistry.PLATINUM_GEAR.get(), "Platinum Gear");
+        add(ItemRegistry.SILVER_GEAR.get(), "Silver Gear");
+        add(ItemRegistry.TIN_GEAR.get(), "Tin Gear");
+        add(ItemRegistry.URANIUM_GEAR.get(), "Uranium Gear");
+
+        add(ItemRegistry.ALUMINIUM_INGOT.get(), "Aluminium Ingot");
+        add(ItemRegistry.COPPER_INGOT.get(), "Copper Ingot");
+        add(ItemRegistry.IRIDIUM_INGOT.get(), "Iridium Ingot");
+        add(ItemRegistry.LEAD_INGOT.get(), "Lead Ingot");
+        add(ItemRegistry.NICKEL_INGOT.get(), "Nickel Ingot");
+        add(ItemRegistry.PLATINUM_INGOT.get(), "Platinum Ingot");
+        add(ItemRegistry.SILVER_INGOT.get(), "Silver Ingot");
+        add(ItemRegistry.TIN_INGOT.get(), "Tin Ingot");
+        add(ItemRegistry.URANIUM_INGOT.get(), "Uranium Ingot");
+
+        add(ItemRegistry.ALUMINIUM_NUGGET.get(), "Aluminium Nugget");
+        add(ItemRegistry.COPPER_NUGGET.get(), "Copper Nugget");
+        add(ItemRegistry.IRIDIUM_NUGGET.get(), "Iridium Nugget");
+        add(ItemRegistry.LEAD_NUGGET.get(), "Lead Nugget");
+        add(ItemRegistry.NICKEL_NUGGET.get(), "Nickel Nugget");
+        add(ItemRegistry.PLATINUM_NUGGET.get(), "Platinum Nugget");
+        add(ItemRegistry.SILVER_NUGGET.get(), "Silver Nugget");
+        add(ItemRegistry.TIN_NUGGET.get(), "Tin Nugget");
+        add(ItemRegistry.URANIUM_NUGGET.get(), "Uranium Nugget");
 
         add("messages.colonovastechmod.aluminium", "Yes it is spelled correctly. Colonova is British and they spell it this way!");
     }

@@ -44,5 +44,33 @@ public class ItemModels extends ItemModelProvider
         withExistingParent(ItemRegistry.DEEP_SLATE_SILVER_ORE.getId().getPath(), modLoc("block/deepslate_aluminium_ore"));
         withExistingParent(ItemRegistry.DEEP_SLATE_TIN_ORE.getId().getPath(), modLoc("block/deepslate_aluminium_ore"));
         withExistingParent(ItemRegistry.DEEP_SLATE_URANIUM_ORE.getId().getPath(), modLoc("block/deepslate_aluminium_ore"));
+
+        singleTexture(ItemRegistry.ALUMINIUM_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/aluminium_gear"));
+        singleTexture(ItemRegistry.COPPER_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/copper_gear"));
+        singleTexture(ItemRegistry.IRIDIUM_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/iridium_gear"));
+        singleTexture(ItemRegistry.LEAD_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/lead_gear"));
+        singleTexture(ItemRegistry.NICKEL_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/nickel_gear"));
+        singleTexture(ItemRegistry.PLATINUM_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/platinum_gear"));
+        singleTexture(ItemRegistry.SILVER_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/silver_gear"));
+        singleTexture(ItemRegistry.TIN_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/tin_gear"));
+        singleTexture(ItemRegistry.URANIUM_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/uranium_gear"));
+        singleTexture(ItemRegistry.ALUMINIUM_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/aluminium_ingot"));
+        singleTexture(ItemRegistry.COPPER_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/copper_ingot"));
+        singleTexture(ItemRegistry.IRIDIUM_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/iridium_ingot"));
+        singleTexture(ItemRegistry.LEAD_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/lead_ingot"));
+        singleTexture(ItemRegistry.NICKEL_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/nickel_ingot"));
+        singleTexture(ItemRegistry.PLATINUM_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/platinum_ingot"));
+        singleTexture(ItemRegistry.SILVER_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/silver_ingot"));
+        singleTexture(ItemRegistry.TIN_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/tin_ingot"));
+        singleTexture(ItemRegistry.URANIUM_INGOT.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/uranium_ingot"));
+        singleTexture(ItemRegistry.ALUMINIUM_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/aluminium_nugget"));
+        singleTexture(ItemRegistry.COPPER_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/copper_nugget"));
+        singleTexture(ItemRegistry.IRIDIUM_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/iridium_nugget"));
+        singleTexture(ItemRegistry.LEAD_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/lead_nugget"));
+        singleTexture(ItemRegistry.NICKEL_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/nickel_nugget"));
+        singleTexture(ItemRegistry.PLATINUM_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/platinum_nugget"));
+        singleTexture(ItemRegistry.SILVER_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/silver_nugget"));
+        singleTexture(ItemRegistry.TIN_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/tin_nugget"));
+        singleTexture(ItemRegistry.URANIUM_NUGGET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/uranium_nugget"));
     }
 }
