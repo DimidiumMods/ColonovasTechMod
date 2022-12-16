@@ -1,8 +1,6 @@
 package net.colonova.colonovastechmod;
 
-import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
-import net.colonova.colonovastechmod.handler.registry.EffectRegistry;
-import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
+import net.colonova.colonovastechmod.handler.registry.*;
 import net.colonova.colonovastechmod.util.Reference;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -24,23 +22,19 @@ public class ColonovasTechMod
     public ColonovasTechMod()
     {
         BlockRegistry.registerBlocks();
+        ConfiguredFeatureRegistry.registerConfiguredFeatures();
+        PlacedFeatureRegistry.registerPlacedFeatures();
         EffectRegistry.registerEffects();
         ItemRegistry.registerItems();
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event)
-    {
-
-    }
-
-    private void doClientStuff(final FMLClientSetupEvent event)
     {
 
     }
