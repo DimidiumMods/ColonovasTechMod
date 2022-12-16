@@ -20,3 +20,9 @@ license="All rights reserved"
     versionRange="[1.19.2,1.19.3)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.colonovastechmod]]
+    modId="colonovascore"
+    mandatory=true
+    versionRange="1.19.2-0.0.1"
+    ordering="NONE"
+    side="BOTH"
