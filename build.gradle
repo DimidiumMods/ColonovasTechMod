@@ -86,7 +86,7 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${forge_version}"
     runtimeOnly(fg.deobf("mezz.jei:jei-1.19.2-forge:${jei_version}"))
-    implementation "net.colonova.colonovascore:ColonovasCore-${colonovascore_version}"
+    implementation "net.colonova.colonovascore:ColonovasCore-${colonovascore_version}-deobf"
 }
 
 jar {
