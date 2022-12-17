@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "colonovastechmod",
+  "key": {
+    "s": {
+      "item": "colonovastechmod:silver_ingot"
+    }
+  },
+  "pattern": [
+    " s ",
+    "s s",
+    " s "
+  ],
+  "result": {
+    "item": "colonovastechmod:silver_gear"
+  }
+}

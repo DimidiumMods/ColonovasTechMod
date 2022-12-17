@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "colonovastechmod",
+  "key": {
+    "t": {
+      "item": "colonovastechmod:tin_ingot"
+    }
+  },
+  "pattern": [
+    " t ",
+    "t t",
+    " t "
+  ],
+  "result": {
+    "item": "colonovastechmod:tin_gear"
+  }
+}

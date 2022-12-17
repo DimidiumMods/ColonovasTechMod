@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "colonovastechmod:silver_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "colonovastechmod:silver_nugget"
+  }
+}

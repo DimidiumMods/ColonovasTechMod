@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "colonovastechmod",
+  "key": {
+    "c": {
+      "item": "colonovastechmod:copper_ingot"
+    }
+  },
+  "pattern": [
+    " c ",
+    "c c",
+    " c "
+  ],
+  "result": {
+    "item": "colonovastechmod:copper_gear"
+  }
+}

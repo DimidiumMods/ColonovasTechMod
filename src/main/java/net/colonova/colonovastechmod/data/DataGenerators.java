@@ -14,6 +14,7 @@ public class DataGenerators
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator generator = event.getGenerator();
+        generator.addProvider(event.includeServer(), new RecipeGenerator(generator));
         generator.addProvider(event.includeServer(), new LootTableGenerator(generator));
         generator.addProvider(event.includeClient(), new BlockStatesGenerator(generator, event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new ItemModels(generator, event.getExistingFileHelper()));

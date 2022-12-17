@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "colonovastechmod",
+  "key": {
+    "u": {
+      "item": "colonovastechmod:uranium_ingot"
+    }
+  },
+  "pattern": [
+    "uuu",
+    "uuu",
+    "uuu"
+  ],
+  "result": {
+    "item": "colonovastechmod:uranium_block"
+  }
+}

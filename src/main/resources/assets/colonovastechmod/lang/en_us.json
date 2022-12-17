@@ -54,5 +54,6 @@
   "item.colonovastechmod.uranium_ingot": "Uranium Ingot",
   "item.colonovastechmod.uranium_nugget": "Uranium Nugget",
   "itemGroup.colonovastechmod.tab.blocks": "ColonovasTechMod: Blocks",
+  "itemGroup.colonovastechmod.tab.items": "ColonovasTechMod: Items",
   "messages.colonovastechmod.aluminium": "Yes it is spelled correctly. Colonova is British and they spell it this way!"
 }

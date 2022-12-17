@@ -133,6 +133,6 @@ public abstract class BaseLootTableProvider extends LootTableProvider
     @Override
     public String getName()
     {
-        return "MyTutorial LootTables";
+        return "LootTables";
     }
 }
