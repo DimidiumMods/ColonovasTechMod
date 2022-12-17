@@ -3,11 +3,11 @@ loaderVersion="[43,)"
 license="All rights reserved"
 [[mods]]
     modId="colonovastechmod"
-    version="${file.jarVersion}}"
-    displayName="ColonovasTechMod"
+    version="${file.jarVersion}"
+    displayName="Colonovas Tech Mod"
     credits="Colonova"
     authors="Colonova"
-    description='''A tech mod for Mineecraft 1.19 and beyond!'''
+    description='''A tech mod for Minecraft 1.19 and beyond!'''
 [[dependencies.colonovastechmod]]
     modId="forge"
     mandatory=true
