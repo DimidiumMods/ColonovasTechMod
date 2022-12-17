@@ -1,5 +1,6 @@
 package net.colonova.colonovastechmod.handler.registry;
 
+import net.colonova.colonovastechmod.item.ItemElectricWrench;
 import net.colonova.colonovastechmod.item.armor.*;
 import net.colonova.colonovastechmod.item.gear.*;
 import net.colonova.colonovastechmod.item.ingot.*;
@@ -92,6 +93,8 @@ public class ItemRegistry
     public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE = ITEMS.register("radiation_suit_chestplate", ItemRadiationSuitChestplate::new);
     public static final RegistryObject<Item> RADIATION_SUIT_LEGGINGS = ITEMS.register("radiation_suit_leggings", ItemRadiationSuitLeggings::new);
     public static final RegistryObject<Item> RADIATION_SUIT_BOOTS = ITEMS.register("radiation_suit_boots", ItemRadiationSuitBoots::new);
+
+    public static final RegistryObject<Item> WRENCH = ITEMS.register("electric_wrench",() -> new ItemElectricWrench(Reference.CREATIVE_TAB_ITEMS, 1));
 
     public static void registerItems()
     {

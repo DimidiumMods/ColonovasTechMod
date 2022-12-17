@@ -1,0 +1,6 @@
+{
+  "wrench_use": {
+    "sounds": ["colonovastechmod:wrench_use"],
+    "subtitle": "colonovascore.subtitle.wrench_use"
+  }
+}
