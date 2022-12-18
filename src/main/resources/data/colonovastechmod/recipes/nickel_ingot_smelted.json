@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "colonovastechmod:nickel_ore"
+  },
+  "result": "colonovastechmod:nickel_ingot"
+}

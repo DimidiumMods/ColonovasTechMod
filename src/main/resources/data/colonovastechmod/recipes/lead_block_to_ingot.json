@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "colonovastechmod:lead_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "colonovastechmod:lead_ingot"
+  }
+}

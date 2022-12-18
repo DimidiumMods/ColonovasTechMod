@@ -1,13 +1,12 @@
 package net.colonova.colonovastechmod.data;
 
-import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.Tags;
 
 import java.util.function.Consumer;
 
@@ -309,5 +308,124 @@ public class RecipeGenerator extends RecipeProvider
                 .requires(ItemRegistry.URANIUM_INGOT.get())
                 .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.URANIUM_NUGGET.get()))
                 .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.ALUMINIUM_INGOT.get(), 9)
+                .requires(ItemRegistry.ALUMINIUM_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.ALUMINIUM_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "aluminium_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.COPPER_INGOT.get(), 9)
+                .requires(ItemRegistry.COPPER_INGOT.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.COPPER_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "copper_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.IRIDIUM_INGOT.get(), 9)
+                .requires(ItemRegistry.IRIDIUM_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.IRIDIUM_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "iridium_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.LEAD_INGOT.get(), 9)
+                .requires(ItemRegistry.LEAD_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.LEAD_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "lead_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.NICKEL_INGOT.get(), 9)
+                .requires(ItemRegistry.NICKEL_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.NICKEL_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "nickel_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.PLATINUM_INGOT.get(), 9)
+                .requires(ItemRegistry.PLATINUM_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.PLATINUM_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "platinum_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.SILVER_INGOT.get(), 9)
+                .requires(ItemRegistry.SILVER_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.SILVER_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "silver_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.TIN_INGOT.get(), 9)
+                .requires(ItemRegistry.TIN_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.TIN_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "tin_block_to_ingot");
+
+        ShapelessRecipeBuilder.shapeless(ItemRegistry.URANIUM_INGOT.get(), 9)
+                .requires(ItemRegistry.URANIUM_BLOCK.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.URANIUM_INGOT.get()))
+                .save(consumer, "colonovastechmod:" + "uranium_block_to_ingot");
+
+        /* Smelting */
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.ALUMINIUM_ORE.get()), ItemRegistry.ALUMINIUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.ALUMINIUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "aluminium_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.COPPER_ORE.get()), ItemRegistry.COPPER_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.COPPER_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "copper_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.IRIDIUM_ORE.get()), ItemRegistry.IRIDIUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.IRIDIUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "iridium_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.LEAD_ORE.get()), ItemRegistry.LEAD_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.LEAD_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "lead_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.NICKEL_ORE.get()), ItemRegistry.NICKEL_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.NICKEL_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "nickel_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.PLATINUM_ORE.get()), ItemRegistry.PLATINUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.PLATINUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "platinum_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.SILVER_ORE.get()), ItemRegistry.SILVER_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.SILVER_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "silver_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.TIN_ORE.get()), ItemRegistry.TIN_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.TIN_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "tin_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.URANIUM_ORE.get()), ItemRegistry.URANIUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.URANIUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "uranium_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_ALUMINIUM_ORE.get()), ItemRegistry.ALUMINIUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_ALUMINIUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_aluminium_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_COPPER_ORE.get()), ItemRegistry.COPPER_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_COPPER_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_copper_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_IRIDIUM_ORE.get()), ItemRegistry.IRIDIUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_IRIDIUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_iridium_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_LEAD_ORE.get()), ItemRegistry.LEAD_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_LEAD_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_lead_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_NICKEL_ORE.get()), ItemRegistry.NICKEL_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_NICKEL_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_nickel_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_PLATINUM_ORE.get()), ItemRegistry.PLATINUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_PLATINUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_platinum_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_SILVER_ORE.get()), ItemRegistry.SILVER_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_SILVER_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_silver_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_TIN_ORE.get()), ItemRegistry.TIN_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_TIN_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_tin_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_URANIUM_ORE.get()), ItemRegistry.URANIUM_INGOT.get(), 1.0F, 100)
+                .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_URANIUM_ORE.get()).build()))
+                .save(consumer, "colonovastechmod:" + "deepslate_uranium_ingot_smelted");
     }
 }

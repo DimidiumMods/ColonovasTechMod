@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "colonovastechmod:iridium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "colonovastechmod:iridium_ingot"
+  }
+}
