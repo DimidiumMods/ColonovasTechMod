@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "colonovastechmod:silver_ore_placed",
+  "features": "colonovastechmod:deepslate_iridium_ore",
   "step": "underground_ores"
 }

@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "colonovastechmod:deepslate_tin_ore_placed",
+  "features": "colonovastechmod:platinum_ore",
   "step": "underground_ores"
 }
