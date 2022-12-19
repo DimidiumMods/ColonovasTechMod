@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "colonovastechmod:aluminium_block",
+    "colonovastechmod:aluminium_ore",
+    "colonovastechmod:copper_block",
+    "colonovastechmod:copper_ore",
+    "colonovastechmod:deepslate_aluminium_ore",
+    "colonovastechmod:deepslate_copper_ore",
+    "colonovastechmod:deepslate_lead_ore",
+    "colonovastechmod:deepslate_nickel_ore",
+    "colonovastechmod:deepslate_silver_ore",
+    "colonovastechmod:deepslate_tin_ore",
+    "colonovastechmod:lead_block",
+    "colonovastechmod:lead_ore",
+    "colonovastechmod:nickel_block",
+    "colonovastechmod:nickel_ore",
+    "colonovastechmod:silver_block",
+    "colonovastechmod:silver_ore",
+    "colonovastechmod:tin_block",
+    "colonovastechmod:tin_ore"
+  ]
+}
