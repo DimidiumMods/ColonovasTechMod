@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "colonovastechmod:aluminium_ore"
+          "name": "colonovastechmod:tin_ore"
         }
       ],
       "name": "tin_ore",
