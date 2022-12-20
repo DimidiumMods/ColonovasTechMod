@@ -48,7 +48,7 @@ public class FluidRegistry
 
     public static final RegistryObject<FlowingFluid> SOURCE_MOLTEN_URANIUM = FLUIDS.register("molten_uranium_fluid", () -> new ForgeFlowingFluid.Source(FluidRegistry.MOLTEN_URANIUM_FLUID_PROPERTIES));
     public static final RegistryObject<FlowingFluid> FLOWING_MOLTEN_URANIUM = FLUIDS.register("flowing_molten_uranium", () -> new ForgeFlowingFluid.Flowing(FluidRegistry.MOLTEN_URANIUM_FLUID_PROPERTIES));
-    public static final ForgeFlowingFluid.Properties MOLTEN_URANIUM_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(FluidTypeRegistry.MOLTEN_URANIUM_FLUID_TYPE, SOURCE_MOLTEN_URANIUM, FLOWING_MOLTEN_URANIUM).slopeFindDistance(2).levelDecreasePerBlock(2).block(BlockRegistry.MOLTEN_ALUMINIUM_BLOCK).bucket(ItemRegistry.MOLTEN_ALUMINIUM_BUCKET);
+    public static final ForgeFlowingFluid.Properties MOLTEN_URANIUM_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(FluidTypeRegistry.MOLTEN_URANIUM_FLUID_TYPE, SOURCE_MOLTEN_URANIUM, FLOWING_MOLTEN_URANIUM).slopeFindDistance(2).levelDecreasePerBlock(2).block(BlockRegistry.MOLTEN_URANIUM_BLOCK).bucket(ItemRegistry.MOLTEN_URANIUM_BUCKET);
 
 
     public static void registerFluids()
