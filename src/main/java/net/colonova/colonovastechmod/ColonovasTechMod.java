@@ -73,6 +73,22 @@ public class ColonovasTechMod
         {
             ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_COPPER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_COPPER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_IRIDIUM.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_IRIDIUM.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_LEAD.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_LEAD.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_NICKEL.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_NICKEL.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_PLATINUM.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_PLATINUM.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_SILVER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_SILVER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_TIN.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_TIN.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_URANIUM.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_URANIUM.get(), RenderType.translucent());
         }
     }
 }
