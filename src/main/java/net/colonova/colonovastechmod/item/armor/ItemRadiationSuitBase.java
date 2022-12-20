@@ -1,5 +1,7 @@
 package net.colonova.colonovastechmod.item.armor;
 
+import net.colonova.colonovascore.api.energy.item.PoweredArmorItem;
+import net.colonova.colonovastechmod.handler.EnumHandler;
 import net.colonova.colonovastechmod.handler.registry.EffectRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
@@ -8,22 +10,26 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
-
-public class ItemRadiationSuitBase extends ArmorItem
+public class ItemRadiationSuitBase extends PoweredArmorItem
 {
-    public ItemRadiationSuitBase(EquipmentSlot slot, int maxDamage)
+    public ItemRadiationSuitBase(EquipmentSlot slot)
     {
-        super(ArmorMaterials.LEATHER, slot, new Item.Properties()
-                .tab(Reference.CREATIVE_TAB_ITEMS)
-                .stacksTo(1)
-                .setNoRepair()
-                .durability(maxDamage));
+
+        super(EnumHandler.RubberArmorMaterial.RUBBER, slot, Reference.CREATIVE_TAB_ITEMS, 1000);
+    }
+
+    public ItemRadiationSuitBase()
+    {
+        super(EnumHandler.RubberArmorMaterial.RUBBER, EquipmentSlot.HEAD, Reference.CREATIVE_TAB_ITEMS, 1000);
+    }
+
+    @Override
+    public ArmorMaterial getMaterial()
+    {
+        return super.getMaterial();
     }
 
     @Override
@@ -63,5 +69,11 @@ public class ItemRadiationSuitBase extends ArmorItem
     public boolean isBarVisible(ItemStack itemStack)
     {
         return true;
+    }
+
+    @Override
+    public double getMaxInput(ItemStack itemStack)
+    {
+        return 10D;
     }
 }

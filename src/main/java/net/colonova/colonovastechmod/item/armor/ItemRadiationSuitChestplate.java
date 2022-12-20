@@ -6,6 +6,6 @@ public class ItemRadiationSuitChestplate extends ItemRadiationSuitBase
 {
     public ItemRadiationSuitChestplate()
     {
-        super(EquipmentSlot.CHEST, 500);
+        super(EquipmentSlot.CHEST);
     }
 }

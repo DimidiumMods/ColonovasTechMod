@@ -6,7 +6,7 @@ public class ItemRadiationSuitBoots extends ItemRadiationSuitBase
 {
     public ItemRadiationSuitBoots()
     {
-        super(EquipmentSlot.FEET, 500);
+        super(EquipmentSlot.FEET);
     }
 }
 

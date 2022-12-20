@@ -6,6 +6,6 @@ public class ItemRadiationSuitHelmet extends ItemRadiationSuitBase
 {
     public ItemRadiationSuitHelmet()
     {
-        super(EquipmentSlot.HEAD, 500);
+        super(EquipmentSlot.HEAD);
     }
 }

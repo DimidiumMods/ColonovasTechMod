@@ -6,6 +6,6 @@ public class ItemRadiationSuitLeggings extends ItemRadiationSuitBase
 {
     public ItemRadiationSuitLeggings()
     {
-        super(EquipmentSlot.LEGS, 500);
+        super(EquipmentSlot.LEGS);
     }
 }
