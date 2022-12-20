@@ -6,6 +6,9 @@ import net.colonova.colonovastechmod.util.Reference;
 
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -13,7 +16,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class BlockRegistry
 {
-    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Reference.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Reference.MOD_ID);
+
+    /* Ores */
 
     public static final RegistryObject<Block> ALUMINIUM_ORE = BLOCKS.register("aluminium_ore", BlockAluminiumOre::new);
     public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", BlockCopperOre::new);
@@ -34,6 +39,8 @@ public class BlockRegistry
     public static final RegistryObject<Block> DEEP_SLATE_TIN_ORE = BLOCKS.register("deepslate_tin_ore", BlockTinOre::new);
     public static final RegistryObject<Block> DEEP_SLATE_URANIUM_ORE = BLOCKS.register("deepslate_uranium_ore", BlockUraniumOre::new);
 
+    /* Ore Blocks */
+
     public static final RegistryObject<Block> ALUMINIUM_BLOCK = BLOCKS.register("aluminium_block", BlockAluminiumBlock::new);
     public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", BlockCopperBlock::new);
     public static final RegistryObject<Block> IRIDIUM_BLOCK = BLOCKS.register("iridium_block", BlockIridiumBlock::new);
@@ -43,6 +50,18 @@ public class BlockRegistry
     public static final RegistryObject<Block> SILVER_BLOCK = BLOCKS.register("silver_block", BlockSilverBlock::new);
     public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", BlockTinBlock::new);
     public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", BlockUraniumBlock::new);
+
+    /* Fluid blocks */
+
+    public static final RegistryObject<LiquidBlock> MOLTEN_ALUMINIUM_BLOCK = BLOCKS.register("molten_aluminium_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_ALUMINIUM, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_COPPER_BLOCK = BLOCKS.register("molten_copper_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_COPPER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_IRIDIUM_BLOCK = BLOCKS.register("molten_iridium_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_IRIDIUM, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_LEAD_BLOCK = BLOCKS.register("molten_lead_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_LEAD, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_NICKEL_BLOCK = BLOCKS.register("molten_nickel_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_NICKEL, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_PLATINUM_BLOCK = BLOCKS.register("molten_platinum_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_PLATINUM, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_SILVER_BLOCK = BLOCKS.register("molten_silver_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_SILVER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_TIN_BLOCK = BLOCKS.register("molten_tin_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_SILVER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> MOLTEN_URANIUM_BLOCK = BLOCKS.register("molten_uranium_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_SILVER, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static void registerBlocks()
     {

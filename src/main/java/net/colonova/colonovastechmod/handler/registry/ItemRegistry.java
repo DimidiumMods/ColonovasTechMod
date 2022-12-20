@@ -9,7 +9,9 @@ import net.colonova.colonovastechmod.item.block.BlockItemUranium;
 import net.colonova.colonovastechmod.util.Reference;
 
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,7 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ItemRegistry
 {
 
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 
     /* Ores */
 
@@ -95,6 +97,42 @@ public class ItemRegistry
     public static final RegistryObject<Item> RADIATION_SUIT_BOOTS = ITEMS.register("radiation_suit_boots", ItemRadiationSuitBoots::new);
 
     public static final RegistryObject<Item> WRENCH = ITEMS.register("electric_wrench",() -> new ItemElectricWrench(Reference.CREATIVE_TAB_ITEMS, 1));
+
+    public static final RegistryObject<Item> MOLTEN_ALUMINIUM_BUCKET = ITEMS.register("molten_aluminium_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_ALUMINIUM,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_COPPER_BUCKET = ITEMS.register("molten_copper_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_COPPER,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_IRIDIUM_BUCKET = ITEMS.register("molten_iridium_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_IRIDIUM,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_LEAD_BUCKET = ITEMS.register("molten_lead_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_LEAD,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_NICKEL_BUCKET = ITEMS.register("molten_nickel_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_NICKEL,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_PLATINUM_BUCKET = ITEMS.register("molten_platinum_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_PLATINUM,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_SILVER_BUCKET = ITEMS.register("molten_silver_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_SILVER,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_TIN_BUCKET = ITEMS.register("molten_tin_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_TIN,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> MOLTEN_URANIUM_BUCKET = ITEMS.register("molten_uranium_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_URANIUM,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static void registerItems()
     {
