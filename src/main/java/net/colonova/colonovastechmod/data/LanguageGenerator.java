@@ -79,6 +79,23 @@ public class LanguageGenerator extends LanguageProvider
         add(ItemRegistry.TIN_NUGGET.get(), "Tin Nugget");
         add(ItemRegistry.URANIUM_NUGGET.get(), "Uranium Nugget");
 
+        add(ItemRegistry.RADIATION_SUIT_HELMET.get(), "Radiation Suit Helmet");
+        add(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get(), "Radiation Suit Chestplate");
+        add(ItemRegistry.RADIATION_SUIT_LEGGINGS.get(), "Radiation Suit Leggings");
+        add(ItemRegistry.RADIATION_SUIT_BOOTS.get(), "Radiation Suit Boots");
+
+        add(ItemRegistry.WRENCH.get(), "Electric Wrench");
+
+        add(ItemRegistry.MOLTEN_ALUMINIUM_BUCKET.get(), "Aluminium Bucket");
+        add(ItemRegistry.MOLTEN_COPPER_BUCKET.get(), "Copper Bucket");
+        add(ItemRegistry.MOLTEN_IRIDIUM_BUCKET.get(), "Iridium Bucket");
+        add(ItemRegistry.MOLTEN_LEAD_BUCKET.get(), "Lead Bucket");
+        add(ItemRegistry.MOLTEN_NICKEL_BUCKET.get(), "Nickel Bucket");
+        add(ItemRegistry.MOLTEN_PLATINUM_BUCKET.get(), "Platinum Bucket");
+        add(ItemRegistry.MOLTEN_SILVER_BUCKET.get(), "Silver Bucket");
+        add(ItemRegistry.MOLTEN_TIN_BUCKET.get(), "Tin Bucket");
+        add(ItemRegistry.MOLTEN_URANIUM_BUCKET.get(), "Uranium Bucket");
+
         add("messages.colonovastechmod.aluminium", "Yes it is spelled correctly. Colonova is British and they spell it this way!");
     }
 }

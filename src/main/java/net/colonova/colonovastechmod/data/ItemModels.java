@@ -77,5 +77,15 @@ public class ItemModels extends ItemModelProvider
         singleTexture(ItemRegistry.RADIATION_SUIT_CHESTPLATE.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_chestplate"));
         singleTexture(ItemRegistry.RADIATION_SUIT_LEGGINGS.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_leggings"));
         singleTexture(ItemRegistry.RADIATION_SUIT_BOOTS.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_boots"));
+
+        singleTexture(ItemRegistry.MOLTEN_ALUMINIUM_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_COPPER_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_IRIDIUM_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_LEAD_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_NICKEL_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_PLATINUM_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_SILVER_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_TIN_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
+        singleTexture(ItemRegistry.MOLTEN_URANIUM_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
     }
 }
