@@ -96,6 +96,7 @@ public class LanguageGenerator extends LanguageProvider
         add(ItemRegistry.MOLTEN_TIN_BUCKET.get(), "Tin Bucket");
         add(ItemRegistry.MOLTEN_URANIUM_BUCKET.get(), "Uranium Bucket");
 
+        add("enchantment.colonovastechmod.soul_binding", "Soul Binding");
         add("messages.colonovastechmod.aluminium", "Yes it is spelled correctly. Colonova is British and they spell it this way!");
     }
 }

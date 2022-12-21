@@ -1,24 +1,33 @@
 package net.colonova.colonovastechmod.handler.event;
 
 import net.colonova.colonovascore.api.energy.EnergyAction;
+import net.colonova.colonovastechmod.ColonovasTechMod;
+import net.colonova.colonovastechmod.handler.registry.EnchantmentRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, modid = Reference.MOD_ID)
 public class DamageEvent
 {
     private static final double MIN_FE = 0.0001;
     private static final String CURRENT_FE_KEY = "currentFE";
+    private static final ArrayList<ItemStack> ITEMS = new ArrayList<>();
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onAttack(AttackEntityEvent event)
@@ -99,6 +108,29 @@ public class DamageEvent
                     extractFE(player.getInventory().armor.get(3), 1, EnergyAction.EXECUTE);
                 }
             }
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void onDrop(LivingDropsEvent event)
+    {
+        for(ItemEntity item : event.getDrops())
+        {
+            if(EnchantmentHelper.getItemEnchantmentLevel(EnchantmentRegistry.SOUL_BINDING.get(), item.getItem()) > 0)
+            {
+                ITEMS.add(item.getItem());
+            }
+
+            ColonovasTechMod.LOGGER.debug("No");
+        }
+    }
+
+    @SubscribeEvent(priority =  EventPriority.HIGHEST)
+    public static void onRespawn(PlayerEvent.PlayerRespawnEvent event)
+    {
+        for(ItemStack item : ITEMS)
+        {
+            event.getEntity().getInventory().add(item);
         }
     }
 
