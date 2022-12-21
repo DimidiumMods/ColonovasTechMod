@@ -16,6 +16,9 @@ public class DataGenerators
         DataGenerator generator = event.getGenerator();
         generator.addProvider(event.includeServer(), new RecipeGenerator(generator));
         generator.addProvider(event.includeServer(), new LootTableGenerator(generator));
+        BlockTagsGenerator blockTags = new BlockTagsGenerator(generator, event.getExistingFileHelper());
+        generator.addProvider(event.includeServer(), blockTags);
+        generator.addProvider(event.includeServer(), new ItemTagsGenerator(generator, blockTags, event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new BlockStatesGenerator(generator, event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new ItemModels(generator, event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new LanguageGenerator(generator, "en_us"));
