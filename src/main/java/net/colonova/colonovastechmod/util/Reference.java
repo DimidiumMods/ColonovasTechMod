@@ -5,8 +5,6 @@ import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-import java.sql.Ref;
-
 public class Reference
 {
     public static final String MOD_ID = "colonovastechmod";

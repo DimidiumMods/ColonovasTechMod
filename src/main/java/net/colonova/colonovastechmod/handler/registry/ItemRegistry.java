@@ -1,5 +1,7 @@
 package net.colonova.colonovastechmod.handler.registry;
 
+import net.colonova.colonovascore.api.item.ItemBase;
+import net.colonova.colonovastechmod.handler.EnumHandler;
 import net.colonova.colonovastechmod.item.*;
 import net.colonova.colonovastechmod.item.armor.*;
 import net.colonova.colonovastechmod.item.gear.*;
@@ -8,10 +10,8 @@ import net.colonova.colonovastechmod.item.nugget.*;
 import net.colonova.colonovastechmod.item.block.BlockItemUranium;
 import net.colonova.colonovastechmod.util.Reference;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -91,10 +91,15 @@ public class ItemRegistry
     public static final RegistryObject<Item> TIN_NUGGET = ITEMS.register("tin_nugget", ItemTinNugget::new);
     public static final RegistryObject<Item> URANIUM_NUGGET = ITEMS.register("uranium_nugget", ItemUraniumNugget::new);
 
-    public static final RegistryObject<Item> RADIATION_SUIT_HELMET = ITEMS.register("radiation_suit_helmet", ItemRadiationSuitHelmet::new);
-    public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE = ITEMS.register("radiation_suit_chestplate", ItemRadiationSuitChestplate::new);
-    public static final RegistryObject<Item> RADIATION_SUIT_LEGGINGS = ITEMS.register("radiation_suit_leggings", ItemRadiationSuitLeggings::new);
-    public static final RegistryObject<Item> RADIATION_SUIT_BOOTS = ITEMS.register("radiation_suit_boots", ItemRadiationSuitBoots::new);
+    public static final RegistryObject<Item> RADIATION_SUIT_HELMET = ITEMS.register("radiation_suit_helmet", () -> new ItemRadiationSuitBase(EquipmentSlot.HEAD));
+    public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE = ITEMS.register("radiation_suit_chestplate", () -> new ItemRadiationSuitBase(EquipmentSlot.CHEST));
+    public static final RegistryObject<Item> RADIATION_SUIT_LEGGINGS = ITEMS.register("radiation_suit_leggings", () -> new ItemRadiationSuitBase(EquipmentSlot.LEGS));
+    public static final RegistryObject<Item> RADIATION_SUIT_BOOTS = ITEMS.register("radiation_suit_boots", () -> new ItemRadiationSuitBase(EquipmentSlot.FEET));
+
+    public static final RegistryObject<Item> RADIATION_SUIT_HELMET_BROKEN = ITEMS.register("radiation_suit_helmet_broken", () -> new ArmorItem(EnumHandler.BrokenPlasticArmorMaterial.BROKEN_PLASTIC, EquipmentSlot.HEAD, new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE_BROKEN = ITEMS.register("radiation_suit_chestplate_broken", () -> new ArmorItem(EnumHandler.BrokenPlasticArmorMaterial.BROKEN_PLASTIC, EquipmentSlot.CHEST, new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> RADIATION_SUIT_LEGGINGS_BROKEN = ITEMS.register("radiation_suit_leggings_broken", () -> new ArmorItem(EnumHandler.BrokenPlasticArmorMaterial.BROKEN_PLASTIC, EquipmentSlot.LEGS, new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> RADIATION_SUIT_BOOTS_BROKEN = ITEMS.register("radiation_suit_boots_broken", () -> new ArmorItem(EnumHandler.BrokenPlasticArmorMaterial.BROKEN_PLASTIC, EquipmentSlot.FEET, new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> WRENCH = ITEMS.register("electric_wrench",() -> new ItemElectricWrench(Reference.CREATIVE_TAB_ITEMS, 1));
 
@@ -134,6 +139,7 @@ public class ItemRegistry
             () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_URANIUM,
                     new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryObject<Item> RUBBER = ITEMS.register("rubber", ItemRubber::new);
+    public static final RegistryObject<Item> PLASTIC = ITEMS.register("plastic", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
 
     public static void registerItems()
     {

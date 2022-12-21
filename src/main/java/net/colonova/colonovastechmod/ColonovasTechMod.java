@@ -39,6 +39,8 @@ public class ColonovasTechMod
         FluidRegistry.registerFluids();
         FluidTypeRegistry.registerFluidTypes();
 
+        EnchantmentRegistry.registerEnchantments();
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);

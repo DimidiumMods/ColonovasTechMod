@@ -4,7 +4,9 @@ import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.network.chat.Component;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class LanguageGenerator extends LanguageProvider
@@ -96,6 +98,18 @@ public class LanguageGenerator extends LanguageProvider
         add(ItemRegistry.MOLTEN_TIN_BUCKET.get(), "Tin Bucket");
         add(ItemRegistry.MOLTEN_URANIUM_BUCKET.get(), "Uranium Bucket");
 
+        add("enchantment.colonovastechmod.soul_binding", "Soul Binding");
         add("messages.colonovastechmod.aluminium", "Yes it is spelled correctly. Colonova is British and they spell it this way!");
+
+        add(ItemRegistry.RUBBER.get(), "Raw Rubber");
+        add(ItemRegistry.PLASTIC.get(), "Plastic");
+
+        add("effect.colonovastechmods.anti_radiation", "Radiation Resistance");
+        add("messages.colonovastechmod.radiation_suit", "Wearing a full suit of this armor grants you radiation resistance! (WIP)");
+
+        add(ItemRegistry.RADIATION_SUIT_HELMET_BROKEN.get(), "Broken Radiation Suit Helmet");
+        add(ItemRegistry.RADIATION_SUIT_CHESTPLATE_BROKEN.get(), "Broken Radiation Suit Chestplate");
+        add(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.get(), "Broken Radiation Suit Leggings");
+        add(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.get(), "Broken Radiation Suit Boots");
     }
 }

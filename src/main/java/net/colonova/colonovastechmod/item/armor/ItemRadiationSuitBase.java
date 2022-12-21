@@ -6,24 +6,30 @@ import net.colonova.colonovastechmod.handler.registry.EffectRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ItemRadiationSuitBase extends PoweredArmorItem
 {
     public ItemRadiationSuitBase(EquipmentSlot slot)
     {
 
-        super(EnumHandler.RubberArmorMaterial.RUBBER, slot, Reference.CREATIVE_TAB_ITEMS, 1000);
+        super(EnumHandler.PlasticArmorMaterial.PLASTIC, slot, Reference.CREATIVE_TAB_ITEMS, 5000);
     }
 
     public ItemRadiationSuitBase()
     {
-        super(EnumHandler.RubberArmorMaterial.RUBBER, EquipmentSlot.HEAD, Reference.CREATIVE_TAB_ITEMS, 1000);
+        super(EnumHandler.PlasticArmorMaterial.PLASTIC, EquipmentSlot.HEAD, Reference.CREATIVE_TAB_ITEMS, 5000);
     }
 
     @Override
@@ -60,7 +66,7 @@ public class ItemRadiationSuitBase extends PoweredArmorItem
                     return;
                 }
 
-                player.addEffect(new MobEffectInstance(EffectRegistry.ANTI_RADIATION.get(), Integer.MAX_VALUE, 1));
+                player.addEffect(new MobEffectInstance(EffectRegistry.ANTI_RADIATION.get(), Integer.MAX_VALUE, 0));
             }
         }
     }
@@ -75,5 +81,12 @@ public class ItemRadiationSuitBase extends PoweredArmorItem
     public double getMaxInput(ItemStack itemStack)
     {
         return 10D;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag options)
+    {
+        tooltip.add(Component.translatable("messages.colonovastechmod.radiation_suit")
+                .withStyle(ChatFormatting.AQUA));
     }
 }
