@@ -18,12 +18,12 @@ public class ItemRadiationSuitBase extends PoweredArmorItem
     public ItemRadiationSuitBase(EquipmentSlot slot)
     {
 
-        super(EnumHandler.RubberArmorMaterial.RUBBER, slot, Reference.CREATIVE_TAB_ITEMS, 1000);
+        super(EnumHandler.RubberArmorMaterial.PLASTIC, slot, Reference.CREATIVE_TAB_ITEMS, 5000);
     }
 
     public ItemRadiationSuitBase()
     {
-        super(EnumHandler.RubberArmorMaterial.RUBBER, EquipmentSlot.HEAD, Reference.CREATIVE_TAB_ITEMS, 1000);
+        super(EnumHandler.RubberArmorMaterial.PLASTIC, EquipmentSlot.HEAD, Reference.CREATIVE_TAB_ITEMS, 5000);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class ItemRadiationSuitBase extends PoweredArmorItem
                     return;
                 }
 
-                player.addEffect(new MobEffectInstance(EffectRegistry.ANTI_RADIATION.get(), Integer.MAX_VALUE, 1));
+                player.addEffect(new MobEffectInstance(EffectRegistry.ANTI_RADIATION.get(), Integer.MAX_VALUE, 0));
             }
         }
     }

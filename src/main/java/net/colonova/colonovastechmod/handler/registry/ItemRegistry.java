@@ -9,6 +9,7 @@ import net.colonova.colonovastechmod.item.nugget.*;
 import net.colonova.colonovastechmod.item.block.BlockItemUranium;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
@@ -92,10 +93,10 @@ public class ItemRegistry
     public static final RegistryObject<Item> TIN_NUGGET = ITEMS.register("tin_nugget", ItemTinNugget::new);
     public static final RegistryObject<Item> URANIUM_NUGGET = ITEMS.register("uranium_nugget", ItemUraniumNugget::new);
 
-    public static final RegistryObject<Item> RADIATION_SUIT_HELMET = ITEMS.register("radiation_suit_helmet", ItemRadiationSuitHelmet::new);
-    public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE = ITEMS.register("radiation_suit_chestplate", ItemRadiationSuitChestplate::new);
-    public static final RegistryObject<Item> RADIATION_SUIT_LEGGINGS = ITEMS.register("radiation_suit_leggings", ItemRadiationSuitLeggings::new);
-    public static final RegistryObject<Item> RADIATION_SUIT_BOOTS = ITEMS.register("radiation_suit_boots", ItemRadiationSuitBoots::new);
+    public static final RegistryObject<Item> RADIATION_SUIT_HELMET = ITEMS.register("radiation_suit_helmet", () -> new ItemRadiationSuitBase(EquipmentSlot.HEAD));
+    public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE = ITEMS.register("radiation_suit_chestplate", () -> new ItemRadiationSuitBase(EquipmentSlot.CHEST));
+    public static final RegistryObject<Item> RADIATION_SUIT_LEGGINGS = ITEMS.register("radiation_suit_leggings", () -> new ItemRadiationSuitBase(EquipmentSlot.LEGS));
+    public static final RegistryObject<Item> RADIATION_SUIT_BOOTS = ITEMS.register("radiation_suit_boots", () -> new ItemRadiationSuitBase(EquipmentSlot.FEET));
 
     public static final RegistryObject<Item> WRENCH = ITEMS.register("electric_wrench",() -> new ItemElectricWrench(Reference.CREATIVE_TAB_ITEMS, 1));
 

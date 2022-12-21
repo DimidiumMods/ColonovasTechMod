@@ -18,7 +18,7 @@ public class EnumHandler
 {
     public enum RubberArmorMaterial implements ArmorMaterial
     {
-        RUBBER("rubber", 1500, new int[] { 9, 14, 16, 9 }, 0, SoundEvents.ARMOR_EQUIP_LEATHER, 8f, 0.3f, () -> Ingredient.of(ItemRegistry.RUBBER.get()));
+        PLASTIC("plastic", 1500, new int[] { 2, 2, 2, 2 }, 0, SoundEvents.ARMOR_EQUIP_LEATHER, 3f, 0.1f, () -> Ingredient.of(ItemRegistry.PLASTIC.get()));
 
         private final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };
         private final String name;
