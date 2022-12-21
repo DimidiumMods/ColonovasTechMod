@@ -98,5 +98,8 @@ public class LanguageGenerator extends LanguageProvider
 
         add("enchantment.colonovastechmod.soul_binding", "Soul Binding");
         add("messages.colonovastechmod.aluminium", "Yes it is spelled correctly. Colonova is British and they spell it this way!");
+
+        add(ItemRegistry.RUBBER.get(), "Raw Rubber");
+        add(ItemRegistry.PLASTIC.get(), "Plastic");
     }
 }

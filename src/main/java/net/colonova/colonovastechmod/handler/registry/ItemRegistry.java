@@ -1,5 +1,6 @@
 package net.colonova.colonovastechmod.handler.registry;
 
+import net.colonova.colonovascore.api.item.ItemBase;
 import net.colonova.colonovastechmod.item.*;
 import net.colonova.colonovastechmod.item.armor.*;
 import net.colonova.colonovastechmod.item.gear.*;
@@ -134,6 +135,7 @@ public class ItemRegistry
             () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_URANIUM,
                     new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryObject<Item> RUBBER = ITEMS.register("rubber", ItemRubber::new);
+    public static final RegistryObject<Item> PLASTIC = ITEMS.register("plastic", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
 
     public static void registerItems()
     {

@@ -236,6 +236,42 @@ public class RecipeGenerator extends RecipeProvider
                 .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.PLATINUM_NUGGET.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(ItemRegistry.RADIATION_SUIT_BOOTS.get())
+                .pattern("p p")
+                .pattern("p p")
+                .pattern("   ")
+                .define('p', ItemRegistry.PLASTIC.get())
+                .group("colonovastechmod")
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.PLASTIC.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get())
+                .pattern("p p")
+                .pattern("ppp")
+                .pattern("ppp")
+                .define('p', ItemRegistry.PLASTIC.get())
+                .group("colonovastechmod")
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.PLASTIC.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ItemRegistry.RADIATION_SUIT_HELMET.get())
+                .pattern("ppp")
+                .pattern("p p")
+                .pattern("   ")
+                .define('p', ItemRegistry.PLASTIC.get())
+                .group("colonovastechmod")
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.PLASTIC.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ItemRegistry.RADIATION_SUIT_LEGGINGS.get())
+                .pattern("ppp")
+                .pattern("p p")
+                .pattern("p p")
+                .define('p', ItemRegistry.PLASTIC.get())
+                .group("colonovastechmod")
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.PLASTIC.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(ItemRegistry.SILVER_INGOT.get())
                 .pattern("nnn")
                 .pattern("nnn")
@@ -262,7 +298,6 @@ public class RecipeGenerator extends RecipeProvider
                 .group("colonovastechmod")
                 .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.URANIUM_NUGGET.get()))
                 .save(consumer);
-
 
         ShapelessRecipeBuilder.shapeless(ItemRegistry.ALUMINIUM_NUGGET.get(), 9)
                 .requires(ItemRegistry.ALUMINIUM_INGOT.get())
@@ -427,5 +462,8 @@ public class RecipeGenerator extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.DEEP_SLATE_URANIUM_ORE.get()), ItemRegistry.URANIUM_INGOT.get(), 1.0F, 100)
                 .unlockedBy("has_ore", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.DEEP_SLATE_URANIUM_ORE.get()).build()))
                 .save(consumer, "colonovastechmod:" + "deepslate_uranium_ingot_smelted");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.RUBBER.get()), ItemRegistry.PLASTIC.get(), 1.0F, 100)
+                .unlockedBy("has_item", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.RUBBER.get()).build()));
     }
 }
