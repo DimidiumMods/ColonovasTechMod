@@ -1,12 +1,9 @@
 package net.colonova.colonovastechmod;
 
-import net.colonova.colonovascore.ColonovasCore;
-import net.colonova.colonovastechmod.client.screen.*;
 import net.colonova.colonovastechmod.handler.ConfigurationHandler;
 import net.colonova.colonovastechmod.handler.registry.*;
 import net.colonova.colonovastechmod.util.Reference;
 
-import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
