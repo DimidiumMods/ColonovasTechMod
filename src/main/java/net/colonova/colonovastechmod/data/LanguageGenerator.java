@@ -4,7 +4,9 @@ import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.network.chat.Component;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class LanguageGenerator extends LanguageProvider
@@ -101,5 +103,8 @@ public class LanguageGenerator extends LanguageProvider
 
         add(ItemRegistry.RUBBER.get(), "Raw Rubber");
         add(ItemRegistry.PLASTIC.get(), "Plastic");
+
+        add("effect.colonovastechmods.anti_radiation", "Radiation Resistance");
+        add("messages.colonovastechmod.radiation_suit", "Wearing a full suit of this armor grants you radiation resistance! (WIP)");
     }
 }
