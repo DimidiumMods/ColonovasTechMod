@@ -1,15 +1,16 @@
 package net.colonova.colonovastechmod;
 
-import net.colonova.colonovastechmod.handler.registry.FluidRegistry;
-import net.colonova.colonovastechmod.handler.registry.FluidTypeRegistry;
+import net.colonova.colonovascore.ColonovasCore;
+import net.colonova.colonovastechmod.client.screen.*;
 import net.colonova.colonovastechmod.handler.ConfigurationHandler;
 import net.colonova.colonovastechmod.handler.registry.*;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -30,9 +31,6 @@ public class ColonovasTechMod
 
     public ColonovasTechMod()
     {
-
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigurationHandler.SERVER_CONFIG);
         BlockRegistry.registerBlocks();
         ConfiguredFeatureRegistry.registerConfiguredFeatures();
@@ -66,29 +64,32 @@ public class ColonovasTechMod
 
     }
 
+    @Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_COPPER.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_COPPER.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_IRIDIUM.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_IRIDIUM.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_LEAD.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_LEAD.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_NICKEL.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_NICKEL.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_PLATINUM.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_PLATINUM.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_SILVER.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_SILVER.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_TIN.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_TIN.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_URANIUM.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_URANIUM.get(), RenderType.translucent());
+            event.enqueueWork(() -> {
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_COPPER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_COPPER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_IRIDIUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_IRIDIUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_LEAD.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_LEAD.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_NICKEL.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_NICKEL.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_PLATINUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_PLATINUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_SILVER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_SILVER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_TIN.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_TIN.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_URANIUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_URANIUM.get(), RenderType.translucent());
+            });
         }
     }
 }
