@@ -106,5 +106,10 @@ public class LanguageGenerator extends LanguageProvider
 
         add("effect.colonovastechmods.anti_radiation", "Radiation Resistance");
         add("messages.colonovastechmod.radiation_suit", "Wearing a full suit of this armor grants you radiation resistance! (WIP)");
+
+        add(ItemRegistry.RADIATION_SUIT_HELMET_BROKEN.get(), "Broken Radiation Suit Helmet");
+        add(ItemRegistry.RADIATION_SUIT_CHESTPLATE_BROKEN.get(), "Broken Radiation Suit Chestplate");
+        add(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.get(), "Broken Radiation Suit Leggings");
+        add(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.get(), "Broken Radiation Suit Boots");
     }
 }

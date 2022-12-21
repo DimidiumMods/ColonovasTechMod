@@ -24,12 +24,12 @@ public class ItemRadiationSuitBase extends PoweredArmorItem
     public ItemRadiationSuitBase(EquipmentSlot slot)
     {
 
-        super(EnumHandler.RubberArmorMaterial.PLASTIC, slot, Reference.CREATIVE_TAB_ITEMS, 5000);
+        super(EnumHandler.PlasticArmorMaterial.PLASTIC, slot, Reference.CREATIVE_TAB_ITEMS, 5000);
     }
 
     public ItemRadiationSuitBase()
     {
-        super(EnumHandler.RubberArmorMaterial.PLASTIC, EquipmentSlot.HEAD, Reference.CREATIVE_TAB_ITEMS, 5000);
+        super(EnumHandler.PlasticArmorMaterial.PLASTIC, EquipmentSlot.HEAD, Reference.CREATIVE_TAB_ITEMS, 5000);
     }
 
     @Override

@@ -2,10 +2,12 @@ package net.colonova.colonovastechmod.handler.event;
 
 import net.colonova.colonovascore.api.energy.EnergyAction;
 import net.colonova.colonovastechmod.ColonovasTechMod;
+import net.colonova.colonovastechmod.handler.ConfigurationHandler;
 import net.colonova.colonovastechmod.handler.registry.EnchantmentRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -38,14 +40,50 @@ public class DamageEvent
 
             if(!(player.level.isClientSide))
             {
-                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()) && player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()) && player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()) && player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()))
                 {
-                    //Todo configuration for energy extraction per use and break item if no energy and custom damage source
+                    ItemStack item = player.getInventory().armor.get(0);
 
-                    extractFE(player.getInventory().armor.get(0), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(1), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(2), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(3), 1, EnergyAction.EXECUTE);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.FEET, new ItemStack(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(1);
+
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.LEGS, new ItemStack(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(2);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.CHEST, new ItemStack(ItemRegistry.RADIATION_SUIT_CHESTPLATE_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(3);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ItemRegistry.RADIATION_SUIT_HELMET_BROKEN.get()));
+                    }
                 }
             }
         }
@@ -60,12 +98,50 @@ public class DamageEvent
 
             if(!(player.level.isClientSide))
             {
-                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()) && player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()) && player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()) && player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()))
                 {
-                    extractFE(player.getInventory().armor.get(0), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(1), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(2), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(3), 1, EnergyAction.EXECUTE);
+                    ItemStack item = player.getInventory().armor.get(0);
+
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.FEET, new ItemStack(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(1);
+
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.LEGS, new ItemStack(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(2);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.CHEST, new ItemStack(ItemRegistry.RADIATION_SUIT_CHESTPLATE_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(3);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ItemRegistry.RADIATION_SUIT_HELMET_BROKEN.get()));
+                    }
                 }
             }
         }
@@ -80,12 +156,50 @@ public class DamageEvent
 
             if(!(player.level.isClientSide))
             {
-                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()) && player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()) && player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()) && player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()))
                 {
-                    extractFE(player.getInventory().armor.get(0), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(1), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(2), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(3), 1, EnergyAction.EXECUTE);
+                    ItemStack item = player.getInventory().armor.get(0);
+
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.FEET, new ItemStack(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(1);
+
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.LEGS, new ItemStack(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(2);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.CHEST, new ItemStack(ItemRegistry.RADIATION_SUIT_CHESTPLATE_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(3);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ItemRegistry.RADIATION_SUIT_HELMET_BROKEN.get()));
+                    }
                 }
             }
         }
@@ -100,16 +214,55 @@ public class DamageEvent
 
             if(!(player.level.isClientSide))
             {
-                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()) && player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()) && player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()) && player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                if(player.getInventory().armor.get(0).getItem().equals(ItemRegistry.RADIATION_SUIT_BOOTS.get()))
                 {
-                    extractFE(player.getInventory().armor.get(0), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(1), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(2), 1, EnergyAction.EXECUTE);
-                    extractFE(player.getInventory().armor.get(3), 1, EnergyAction.EXECUTE);
+                    ItemStack item = player.getInventory().armor.get(0);
+
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.FEET, new ItemStack(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(1).getItem().equals(ItemRegistry.RADIATION_SUIT_LEGGINGS.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(1);
+
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.LEGS, new ItemStack(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(2).getItem().equals(ItemRegistry.RADIATION_SUIT_CHESTPLATE.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(2);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.CHEST, new ItemStack(ItemRegistry.RADIATION_SUIT_CHESTPLATE_BROKEN.get()));
+                    }
+                }
+
+                else if(player.getInventory().armor.get(3).getItem().equals(ItemRegistry.RADIATION_SUIT_HELMET.get()))
+                {
+                    ItemStack item = player.getInventory().armor.get(3);
+                    extractFE(item, ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get(), EnergyAction.EXECUTE);
+
+                    if(item.getTag().getDouble(CURRENT_FE_KEY) < ConfigurationHandler.RADIATION_ARMOR_ENERGY_PER_DAMAGE.get())
+                    {
+                        player.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ItemRegistry.RADIATION_SUIT_HELMET_BROKEN.get()));
+                    }
                 }
             }
         }
     }
+
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onDrop(LivingDropsEvent event)
