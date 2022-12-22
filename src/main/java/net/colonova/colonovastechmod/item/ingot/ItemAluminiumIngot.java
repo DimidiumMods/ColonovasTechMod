@@ -1,11 +1,10 @@
 package net.colonova.colonovastechmod.item.ingot;
 
-
-import net.colonova.colonovastechmod.util.Reference;
+import net.colonova.colonovascore.api.item.ItemBase;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -14,13 +13,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ItemAluminiumIngot extends Item
+public class ItemAluminiumIngot extends ItemBase
 {
-    public ItemAluminiumIngot()
+    public ItemAluminiumIngot(CreativeModeTab tab, int stackSize, boolean isVisible)
     {
-        super(new Item.Properties()
-                .tab(Reference.CREATIVE_TAB_ITEMS)
-                .stacksTo(64));
+        super(tab, stackSize, isVisible);
     }
 
     @Override

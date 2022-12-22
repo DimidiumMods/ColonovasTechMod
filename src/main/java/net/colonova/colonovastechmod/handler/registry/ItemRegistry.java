@@ -66,39 +66,39 @@ public class ItemRegistry
 
     /* Gears */
 
-    public static final RegistryObject<Item> ALUMINIUM_GEAR = ITEMS.register("aluminium_gear", ItemAluminiumGear::new);
-    public static final RegistryObject<Item> COPPER_GEAR = ITEMS.register("copper_gear", ItemCopperGear::new);
-    public static final RegistryObject<Item> IRIDIUM_GEAR = ITEMS.register("iridium_gear", ItemIridiumGear::new);
-    public static final RegistryObject<Item> LEAD_GEAR = ITEMS.register("lead_gear", ItemLeadGear::new);
-    public static final RegistryObject<Item> NICKEL_GEAR = ITEMS.register("nickel_gear", ItemNickelGear::new);
-    public static final RegistryObject<Item> PLATINUM_GEAR = ITEMS.register("platinum_gear", ItemPlatinumGear::new);
-    public static final RegistryObject<Item> SILVER_GEAR = ITEMS.register("silver_gear", ItemSilverGear::new);
-    public static final RegistryObject<Item> TIN_GEAR = ITEMS.register("tin_gear", ItemTinGear::new);
-    public static final RegistryObject<Item> URANIUM_GEAR = ITEMS.register("uranium_gear", ItemUraniumGear::new);
+    public static final RegistryObject<Item> ALUMINIUM_GEAR = ITEMS.register("aluminium_gear", () -> new ItemAluminiumGear(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> COPPER_GEAR = ITEMS.register("copper_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> IRIDIUM_GEAR = ITEMS.register("iridium_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> LEAD_GEAR = ITEMS.register("lead_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> NICKEL_GEAR = ITEMS.register("nickel_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> PLATINUM_GEAR = ITEMS.register("platinum_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> SILVER_GEAR = ITEMS.register("silver_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> TIN_GEAR = ITEMS.register("tin_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> URANIUM_GEAR = ITEMS.register("uranium_gear", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
 
     /* Ingots */
 
-    public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", ItemAluminiumIngot::new);
-    public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", ItemCopperIngot::new);
-    public static final RegistryObject<Item> IRIDIUM_INGOT = ITEMS.register("iridium_ingot", ItemIridiumIngot::new);
-    public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot", ItemLeadIngot::new);
-    public static final RegistryObject<Item> NICKEL_INGOT = ITEMS.register("nickel_ingot", ItemNickelIngot::new);
-    public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot", ItemPlatinumIngot::new);
-    public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot", ItemSilverIngot::new);
-    public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", ItemTinIngot::new);
-    public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", ItemUraniumIngot::new);
+    public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", () -> new ItemAluminiumIngot(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> IRIDIUM_INGOT = ITEMS.register("iridium_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> NICKEL_INGOT = ITEMS.register("nickel_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
 
     /* Nuggets */
 
-    public static final RegistryObject<Item> ALUMINIUM_NUGGET = ITEMS.register("aluminium_nugget", ItemAluminiumNugget::new);
-    public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", ItemCopperNugget::new);
-    public static final RegistryObject<Item> IRIDIUM_NUGGET = ITEMS.register("iridium_nugget", ItemIridiumNugget::new);
-    public static final RegistryObject<Item> LEAD_NUGGET = ITEMS.register("lead_nugget", ItemLeadNugget::new);
-    public static final RegistryObject<Item> NICKEL_NUGGET = ITEMS.register("nickel_nugget", ItemNickelNugget::new);
-    public static final RegistryObject<Item> PLATINUM_NUGGET = ITEMS.register("platinum_nugget", ItemPlatinumNugget::new);
-    public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget", ItemSilverNugget::new);
-    public static final RegistryObject<Item> TIN_NUGGET = ITEMS.register("tin_nugget", ItemTinNugget::new);
-    public static final RegistryObject<Item> URANIUM_NUGGET = ITEMS.register("uranium_nugget", ItemUraniumNugget::new);
+    public static final RegistryObject<Item> ALUMINIUM_NUGGET = ITEMS.register("aluminium_nugget", () -> new ItemAluminiumNugget(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> IRIDIUM_NUGGET = ITEMS.register("iridium_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> LEAD_NUGGET = ITEMS.register("lead_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> NICKEL_NUGGET = ITEMS.register("nickel_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> PLATINUM_NUGGET = ITEMS.register("platinum_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> TIN_NUGGET = ITEMS.register("tin_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
+    public static final RegistryObject<Item> URANIUM_NUGGET = ITEMS.register("uranium_nugget", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
 
     public static final RegistryObject<Item> RADIATION_SUIT_HELMET = ITEMS.register("radiation_suit_helmet", () -> new ItemRadiationSuitBase(EquipmentSlot.HEAD));
     public static final RegistryObject<Item> RADIATION_SUIT_CHESTPLATE = ITEMS.register("radiation_suit_chestplate", () -> new ItemRadiationSuitBase(EquipmentSlot.CHEST));
