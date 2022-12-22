@@ -41,5 +41,10 @@ public class LootTableGenerator extends BaseLootTableProvider
         lootTables.put(BlockRegistry.DEEP_SLATE_SILVER_ORE.get(), createSimpleTable("deep_slate_silver_ore", BlockRegistry.DEEP_SLATE_SILVER_ORE.get()));
         lootTables.put(BlockRegistry.DEEP_SLATE_TIN_ORE.get(), createSimpleTable("deep_slate_tin_ore", BlockRegistry.DEEP_SLATE_TIN_ORE.get()));
         lootTables.put(BlockRegistry.DEEP_SLATE_URANIUM_ORE.get(), createSimpleTable("deep_slate_uranium_ore", BlockRegistry.DEEP_SLATE_URANIUM_ORE.get()));
+
+        lootTables.put(BlockRegistry.BASIC_MACHINE_FRAME.get(), createSimpleTable("basic_machine_frame", BlockRegistry.BASIC_MACHINE_FRAME.get()));
+        lootTables.put(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get(), createSimpleTable("intermediate_machine_frame", BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get()));
+        lootTables.put(BlockRegistry.ADVANCED_MACHINE_FRAME.get(), createSimpleTable("advanced_machine_frame", BlockRegistry.ADVANCED_MACHINE_FRAME.get()));
+        lootTables.put(BlockRegistry.ULTIMATE_MACHINE_FRAME.get(), createSimpleTable("ultimate_machine_frame", BlockRegistry.ULTIMATE_MACHINE_FRAME.get()));
     }
 }

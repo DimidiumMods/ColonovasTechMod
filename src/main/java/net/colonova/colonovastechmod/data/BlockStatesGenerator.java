@@ -44,5 +44,12 @@ public class BlockStatesGenerator extends BlockStateProvider
         simpleBlock(BlockRegistry.DEEP_SLATE_SILVER_ORE.get());
         simpleBlock(BlockRegistry.DEEP_SLATE_TIN_ORE.get());
         simpleBlock(BlockRegistry.DEEP_SLATE_URANIUM_ORE.get());
+
+        /* Machines */
+
+        simpleBlock(BlockRegistry.BASIC_MACHINE_FRAME.get());
+        simpleBlock(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get());
+        simpleBlock(BlockRegistry.ADVANCED_MACHINE_FRAME.get());
+        simpleBlock(BlockRegistry.ULTIMATE_MACHINE_FRAME.get());
     }
 }

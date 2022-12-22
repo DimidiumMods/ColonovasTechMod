@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": {
+      "item": "colonovastechmod:aluminium_gear"
+    },
+    "g": {
+      "tag": "forge:glass"
+    },
+    "i": {
+      "item": "colonovastechmod:aluminium_ingot"
+    }
+  },
+  "pattern": [
+    "igi",
+    "gag",
+    "igi"
+  ],
+  "result": {
+    "item": "colonovastechmod:basic_machine_frame"
+  }
+}

@@ -1,7 +1,9 @@
 package net.colonova.colonovastechmod.handler.registry;
 
 import net.colonova.colonovastechmod.block.*;
+import net.colonova.colonovastechmod.block.machine.*;
 import net.colonova.colonovastechmod.block.ore.*;
+import net.colonova.colonovastechmod.util.MachineType;
 import net.colonova.colonovastechmod.util.Reference;
 
 
@@ -62,6 +64,13 @@ public class BlockRegistry
     public static final RegistryObject<LiquidBlock> MOLTEN_SILVER_BLOCK = BLOCKS.register("molten_silver_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_SILVER, BlockBehaviour.Properties.copy(Blocks.WATER)));
     public static final RegistryObject<LiquidBlock> MOLTEN_TIN_BLOCK = BLOCKS.register("molten_tin_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_SILVER, BlockBehaviour.Properties.copy(Blocks.WATER)));
     public static final RegistryObject<LiquidBlock> MOLTEN_URANIUM_BLOCK = BLOCKS.register("molten_uranium_block", () -> new LiquidBlock(FluidRegistry.SOURCE_MOLTEN_SILVER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    /* Machines */
+
+    public static final RegistryObject<Block> BASIC_MACHINE_FRAME = BLOCKS.register("basic_machine_frame", () -> new BlockMachineFrame(MachineType.BASIC));
+    public static final RegistryObject<Block> INTERMEDIATE_MACHINE_FRAME = BLOCKS.register("intermediate_machine_frame", () -> new BlockMachineFrame(MachineType.INTERMEDIATE));
+    public static final RegistryObject<Block> ADVANCED_MACHINE_FRAME = BLOCKS.register("advanced_machine_frame", () -> new BlockMachineFrame(MachineType.ADVANCED));
+    public static final RegistryObject<Block> ULTIMATE_MACHINE_FRAME = BLOCKS.register("ultimate_machine_frame", () -> new BlockMachineFrame(MachineType.ULTIMATE));
 
     public static void registerBlocks()
     {

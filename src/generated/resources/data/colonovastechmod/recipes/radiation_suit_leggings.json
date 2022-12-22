@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "colonovastechmod",
+  "key": {
+    "p": {
+      "item": "colonovastechmod:plastic"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "p p",
+    "p p"
+  ],
+  "result": {
+    "item": "colonovastechmod:radiation_suit_leggings"
+  }
+}

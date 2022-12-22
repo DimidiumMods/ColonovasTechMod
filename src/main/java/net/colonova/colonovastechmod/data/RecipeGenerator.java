@@ -1,5 +1,6 @@
 package net.colonova.colonovastechmod.data;
 
+import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
 import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
 
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -7,6 +8,7 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Consumer;
 
@@ -465,5 +467,17 @@ public class RecipeGenerator extends RecipeProvider
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemRegistry.RUBBER.get()), ItemRegistry.PLASTIC.get(), 1.0F, 100)
                 .unlockedBy("has_item", inventoryTrigger(ItemPredicate.Builder.item().of(ItemRegistry.RUBBER.get()).build()));
+
+        /* Machines */
+
+        ShapedRecipeBuilder.shaped(BlockRegistry.BASIC_MACHINE_FRAME.get())
+                .pattern("igi")
+                .pattern("gag")
+                .pattern("igi")
+                .define('i', ItemRegistry.ALUMINIUM_INGOT.get())
+                .define('g', Tags.Items.GLASS)
+                .define('a', ItemRegistry.ALUMINIUM_GEAR.get())
+                .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistry.ALUMINIUM_INGOT.get()))
+                .save(consumer);
     }
 }

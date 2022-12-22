@@ -1,6 +1,6 @@
 {
-  "replace": false,
   "values": [
+    "colonovastechmod:deepslate_iridium_ore",
     "colonovastechmod:deepslate_platinum_ore",
     "colonovastechmod:deepslate_uranium_ore",
     "colonovastechmod:iridium_block",

@@ -55,6 +55,13 @@ public class ItemRegistry
     public static final RegistryObject<Item> TIN_BLOCK = ITEMS.register("tin_block", () -> new BlockItem(BlockRegistry.TIN_BLOCK.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS)));
     public static final RegistryObject<Item> URANIUM_BLOCK = ITEMS.register("uranium_block", BlockItemUranium::new);
 
+    /* Machines */
+
+    public static final RegistryObject<Item> BASIC_MACHINE_FRAME = ITEMS.register("basic_machine_frame", () -> new BlockItem(BlockRegistry.BASIC_MACHINE_FRAME.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS)));
+    public static final RegistryObject<Item> INTERMEDIATE_MACHINE_FRAME = ITEMS.register("intermediate_machine_frame", () -> new BlockItem(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS)));
+    public static final RegistryObject<Item> ADVANCED_MACHINE_FRAME = ITEMS.register("advanced_machine_frame", () -> new BlockItem(BlockRegistry.ADVANCED_MACHINE_FRAME.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS)));
+    public static final RegistryObject<Item> ULTIMATE_MACHINE_FRAME = ITEMS.register("ultimate_machine_frame", () -> new BlockItem(BlockRegistry.ULTIMATE_MACHINE_FRAME.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS)));
+
     /* Gears */
 
     public static final RegistryObject<Item> ALUMINIUM_GEAR = ITEMS.register("aluminium_gear", ItemAluminiumGear::new);

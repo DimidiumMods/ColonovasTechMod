@@ -6,10 +6,10 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "colonovastechmod:uranium_block"
+          "name": "colonovastechmod:ultimate_machine_frame"
         }
       ],
-      "name": "uranium_ore",
+      "name": "ultimate_machine_frame",
       "rolls": 1.0
     }
   ]

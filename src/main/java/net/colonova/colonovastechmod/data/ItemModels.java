@@ -17,6 +17,8 @@ public class ItemModels extends ItemModelProvider
     @Override
     protected void registerModels()
     {
+        /* Blocks */
+
         withExistingParent(ItemRegistry.ALUMINIUM_BLOCK.getId().getPath(), modLoc("block/aluminium_block"));
         withExistingParent(ItemRegistry.COPPER_BLOCK.getId().getPath(), modLoc("block/copper_block"));
         withExistingParent(ItemRegistry.IRIDIUM_BLOCK.getId().getPath(), modLoc("block/iridium_block"));
@@ -26,6 +28,9 @@ public class ItemModels extends ItemModelProvider
         withExistingParent(ItemRegistry.SILVER_BLOCK.getId().getPath(), modLoc("block/silver_block"));
         withExistingParent(ItemRegistry.TIN_BLOCK.getId().getPath(), modLoc("block/tin_block"));
         withExistingParent(ItemRegistry.URANIUM_BLOCK.getId().getPath(), modLoc("block/uranium_block"));
+
+        /* Ores */
+
         withExistingParent(ItemRegistry.ALUMINIUM_ORE.getId().getPath(), modLoc("block/aluminium_ore"));
         withExistingParent(ItemRegistry.COPPER_ORE.getId().getPath(), modLoc("block/copper_ore"));
         withExistingParent(ItemRegistry.IRIDIUM_ORE.getId().getPath(), modLoc("block/iridium_ore"));
@@ -44,6 +49,15 @@ public class ItemModels extends ItemModelProvider
         withExistingParent(ItemRegistry.DEEP_SLATE_SILVER_ORE.getId().getPath(), modLoc("block/deepslate_aluminium_ore"));
         withExistingParent(ItemRegistry.DEEP_SLATE_TIN_ORE.getId().getPath(), modLoc("block/deepslate_aluminium_ore"));
         withExistingParent(ItemRegistry.DEEP_SLATE_URANIUM_ORE.getId().getPath(), modLoc("block/deepslate_aluminium_ore"));
+
+        /* Machines */
+
+        withExistingParent(ItemRegistry.BASIC_MACHINE_FRAME.getId().getPath(), modLoc("block/basic_machine_frame"));
+        withExistingParent(ItemRegistry.INTERMEDIATE_MACHINE_FRAME.getId().getPath(), modLoc("block/intermediate_machine_frame"));
+        withExistingParent(ItemRegistry.ADVANCED_MACHINE_FRAME.getId().getPath(), modLoc("block/advanced_machine_frame"));
+        withExistingParent(ItemRegistry.ULTIMATE_MACHINE_FRAME.getId().getPath(), modLoc("block/ultimate_machine_frame"));
+
+        /* Items */
 
         singleTexture(ItemRegistry.ALUMINIUM_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/aluminium_gear"));
         singleTexture(ItemRegistry.COPPER_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/copper_gear"));

@@ -1,5 +1,4 @@
 {
-  "replace": false,
   "values": [
     "colonovastechmod:aluminium_block",
     "colonovastechmod:aluminium_ore",
@@ -13,8 +12,8 @@
     "colonovastechmod:deepslate_tin_ore",
     "colonovastechmod:lead_block",
     "colonovastechmod:lead_ore",
-    "colonovastechmod:nickel_block",
     "colonovastechmod:nickel_ore",
+    "colonovastechmod:nickel_block",
     "colonovastechmod:silver_block",
     "colonovastechmod:silver_ore",
     "colonovastechmod:tin_block",
