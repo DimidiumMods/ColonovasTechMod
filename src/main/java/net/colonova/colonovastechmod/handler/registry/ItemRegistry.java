@@ -147,6 +147,10 @@ public class ItemRegistry
     public static final RegistryObject<Item> MOLTEN_URANIUM_BUCKET = ITEMS.register("molten_uranium_bucket",
             () -> new BucketItem(FluidRegistry.SOURCE_MOLTEN_URANIUM,
                     new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final RegistryObject<Item> LIQUID_EXPERIENCE_BUCKET = ITEMS.register("liquid_experience_bucket",
+            () -> new BucketItem(FluidRegistry.SOURCE_LIQUID_EXPERIENCE,
+                    new Item.Properties().tab(Reference.CREATIVE_TAB_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
     public static final RegistryObject<Item> RUBBER = ITEMS.register("rubber", ItemRubber::new);
     public static final RegistryObject<Item> PLASTIC = ITEMS.register("plastic", () -> new ItemBase(Reference.CREATIVE_TAB_ITEMS, 64, false));
 

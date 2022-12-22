@@ -103,10 +103,11 @@ public class ItemModels extends ItemModelProvider
         singleTexture(ItemRegistry.MOLTEN_SILVER_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
         singleTexture(ItemRegistry.MOLTEN_TIN_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
         singleTexture(ItemRegistry.MOLTEN_URANIUM_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/water_bucket"));
-
         singleTexture(ItemRegistry.RADIATION_SUIT_HELMET_BROKEN.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_helmet"));
         singleTexture(ItemRegistry.RADIATION_SUIT_CHESTPLATE_BROKEN.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_chestplate"));
         singleTexture(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_leggings"));
         singleTexture(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/iron_boots"));
+
+        singleTexture(ItemRegistry.LIQUID_EXPERIENCE_BUCKET.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/liquid_experience_bucket"));
     }
 }

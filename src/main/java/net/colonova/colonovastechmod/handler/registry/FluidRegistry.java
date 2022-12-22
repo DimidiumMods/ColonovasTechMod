@@ -3,7 +3,6 @@ package net.colonova.colonovastechmod.handler.registry;
 import net.colonova.colonovastechmod.util.Reference;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -50,6 +49,13 @@ public class FluidRegistry
     public static final RegistryObject<FlowingFluid> FLOWING_MOLTEN_URANIUM = FLUIDS.register("flowing_molten_uranium", () -> new ForgeFlowingFluid.Flowing(FluidRegistry.MOLTEN_URANIUM_FLUID_PROPERTIES));
     public static final ForgeFlowingFluid.Properties MOLTEN_URANIUM_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(FluidTypeRegistry.MOLTEN_URANIUM_FLUID_TYPE, SOURCE_MOLTEN_URANIUM, FLOWING_MOLTEN_URANIUM).slopeFindDistance(2).levelDecreasePerBlock(2).block(BlockRegistry.MOLTEN_URANIUM_BLOCK).bucket(ItemRegistry.MOLTEN_URANIUM_BUCKET);
 
+    public static final RegistryObject<FlowingFluid> SOURCE_LIQUID_EXPERIENCE = FLUIDS.register("liquid_experience", () -> new ForgeFlowingFluid.Source(FluidRegistry.EXPERIENCE_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_LIQUID_EXPERIENCE = FLUIDS.register("liquid_experience_flowing", () -> new ForgeFlowingFluid.Flowing(FluidRegistry.EXPERIENCE_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties EXPERIENCE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(FluidTypeRegistry.EXPERIENCE_FLUID_TYPE, SOURCE_LIQUID_EXPERIENCE, FLOWING_LIQUID_EXPERIENCE)
+            .slopeFindDistance(2)
+            .levelDecreasePerBlock(2)
+            .block(BlockRegistry.LIQUID_EXPERIENCE_BLOCK)
+            .bucket(ItemRegistry.LIQUID_EXPERIENCE_BUCKET);
 
     public static void registerFluids()
     {

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "colonovastechmod:fluid/liquid_experience_still"
+  }
+}

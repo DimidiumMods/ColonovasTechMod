@@ -118,5 +118,7 @@ public class LanguageGenerator extends LanguageProvider
         add(BlockRegistry.ULTIMATE_MACHINE_FRAME.get(), "Ultimate Machine Frame (WIP)");
 
         add(BlockRegistry.HEALER.get(), "Healer (WIP)");
+
+        add(ItemRegistry.LIQUID_EXPERIENCE_BUCKET.get(), "Liquid Experience Bucket");
     }
 }

@@ -94,6 +94,8 @@ public class ColonovasTechMod
                 ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_TIN.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_URANIUM.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_URANIUM.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_LIQUID_EXPERIENCE.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_LIQUID_EXPERIENCE.get(), RenderType.translucent());
             });
         }
     }
