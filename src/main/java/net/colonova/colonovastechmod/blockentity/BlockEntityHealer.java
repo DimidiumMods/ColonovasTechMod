@@ -1,4 +1,3 @@
-/*
 package net.colonova.colonovastechmod.blockentity;
 
 import net.colonova.colonovastechmod.handler.registry.BlockEntityRegistry;
@@ -140,4 +139,3 @@ public class BlockEntityHealer extends BlockEntity
         return super.getCapability(cap, side);
     }
 }
-*/

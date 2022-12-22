@@ -62,6 +62,8 @@ public class ItemRegistry
     public static final RegistryObject<Item> ADVANCED_MACHINE_FRAME = ITEMS.register("advanced_machine_frame", () -> new BlockItem(BlockRegistry.ADVANCED_MACHINE_FRAME.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS)));
     public static final RegistryObject<Item> ULTIMATE_MACHINE_FRAME = ITEMS.register("ultimate_machine_frame", () -> new BlockItem(BlockRegistry.ULTIMATE_MACHINE_FRAME.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS)));
 
+    public static final RegistryObject<Item> HEALER = ITEMS.register("healer", () -> new BlockItem(BlockRegistry.HEALER.get(), new Item.Properties().tab(Reference.CREATIVE_TAB_BLOCKS).stacksTo(1)));
+
     /* Gears */
 
     public static final RegistryObject<Item> ALUMINIUM_GEAR = ITEMS.register("aluminium_gear", ItemAluminiumGear::new);

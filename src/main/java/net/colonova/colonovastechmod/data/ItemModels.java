@@ -57,6 +57,8 @@ public class ItemModels extends ItemModelProvider
         withExistingParent(ItemRegistry.ADVANCED_MACHINE_FRAME.getId().getPath(), modLoc("block/advanced_machine_frame"));
         withExistingParent(ItemRegistry.ULTIMATE_MACHINE_FRAME.getId().getPath(), modLoc("block/ultimate_machine_frame"));
 
+        withExistingParent(ItemRegistry.HEALER.getId().getPath(), modLoc("block/basic_machine_frame"));
+
         /* Items */
 
         singleTexture(ItemRegistry.ALUMINIUM_GEAR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/aluminium_gear"));

@@ -112,9 +112,11 @@ public class LanguageGenerator extends LanguageProvider
         add(ItemRegistry.RADIATION_SUIT_LEGGINGS_BROKEN.get(), "Broken Radiation Suit Leggings");
         add(ItemRegistry.RADIATION_SUIT_BOOTS_BROKEN.get(), "Broken Radiation Suit Boots");
 
-        add(BlockRegistry.BASIC_MACHINE_FRAME.get(), "Basic Machine Frame");
-        add(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get(), "Intermediate Machine Frame");
-        add(BlockRegistry.ADVANCED_MACHINE_FRAME.get(), "Advanced Machine Frame");
-        add(BlockRegistry.ULTIMATE_MACHINE_FRAME.get(), "Ultimate Machine Frame");
+        add(BlockRegistry.BASIC_MACHINE_FRAME.get(), "Basic Machine Frame (WIP)");
+        add(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get(), "Intermediate Machine Frame (WIP)");
+        add(BlockRegistry.ADVANCED_MACHINE_FRAME.get(), "Advanced Machine Frame (WIP)");
+        add(BlockRegistry.ULTIMATE_MACHINE_FRAME.get(), "Ultimate Machine Frame (WIP)");
+
+        add(BlockRegistry.HEALER.get(), "Healer (WIP)");
     }
 }

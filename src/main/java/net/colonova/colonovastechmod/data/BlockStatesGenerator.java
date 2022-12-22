@@ -51,5 +51,7 @@ public class BlockStatesGenerator extends BlockStateProvider
         simpleBlock(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get());
         simpleBlock(BlockRegistry.ADVANCED_MACHINE_FRAME.get());
         simpleBlock(BlockRegistry.ULTIMATE_MACHINE_FRAME.get());
+
+        simpleBlock(BlockRegistry.HEALER.get());
     }
 }

@@ -46,5 +46,7 @@ public class LootTableGenerator extends BaseLootTableProvider
         lootTables.put(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get(), createSimpleTable("intermediate_machine_frame", BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get()));
         lootTables.put(BlockRegistry.ADVANCED_MACHINE_FRAME.get(), createSimpleTable("advanced_machine_frame", BlockRegistry.ADVANCED_MACHINE_FRAME.get()));
         lootTables.put(BlockRegistry.ULTIMATE_MACHINE_FRAME.get(), createSimpleTable("ultimate_machine_frame", BlockRegistry.ULTIMATE_MACHINE_FRAME.get()));
+
+        lootTables.put(BlockRegistry.HEALER.get(), createSimpleTable("healer", BlockRegistry.HEALER.get()));
     }
 }

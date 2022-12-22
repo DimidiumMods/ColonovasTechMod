@@ -72,6 +72,8 @@ public class BlockRegistry
     public static final RegistryObject<Block> ADVANCED_MACHINE_FRAME = BLOCKS.register("advanced_machine_frame", () -> new BlockMachineFrame(MachineType.ADVANCED));
     public static final RegistryObject<Block> ULTIMATE_MACHINE_FRAME = BLOCKS.register("ultimate_machine_frame", () -> new BlockMachineFrame(MachineType.ULTIMATE));
 
+    public static final RegistryObject<Block> HEALER = BLOCKS.register("healer", BlockHealer::new);
+
     public static void registerBlocks()
     {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());

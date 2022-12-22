@@ -1,9 +1,11 @@
 package net.colonova.colonovastechmod;
 
+import net.colonova.colonovastechmod.client.screen.*;
 import net.colonova.colonovastechmod.handler.ConfigurationHandler;
 import net.colonova.colonovastechmod.handler.registry.*;
 import net.colonova.colonovastechmod.util.Reference;
 
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -41,6 +43,9 @@ public class ColonovasTechMod
 
         EnchantmentRegistry.registerEnchantments();
 
+        BlockEntityRegistry.registerBlockEntities();
+        ContainerRegistry.registerContainers();
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
@@ -70,6 +75,7 @@ public class ColonovasTechMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             event.enqueueWork(() -> {
+                MenuScreens.register(ContainerRegistry.HEALER.get(), ScreenHealer::new);
                 ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FLOWING_MOLTEN_ALUMINIUM.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(FluidRegistry.SOURCE_MOLTEN_COPPER.get(), RenderType.translucent());

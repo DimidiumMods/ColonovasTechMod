@@ -1,5 +1,6 @@
 package net.colonova.colonovastechmod.data;
 
+import net.colonova.colonovastechmod.handler.MachineTags;
 import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
 import net.colonova.colonovastechmod.util.Reference;
 
@@ -95,6 +96,18 @@ public class BlockTagsGenerator extends BlockTagsProvider
                 .add(BlockRegistry.SILVER_ORE.get())
                 .add(BlockRegistry.TIN_ORE.get())
                 .add(BlockRegistry.URANIUM_ORE.get());
+        tag(MachineTags.MINEABLE_WITH_WRENCH)
+                .add(BlockRegistry.BASIC_MACHINE_FRAME.get())
+                .add(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get())
+                .add(BlockRegistry.ADVANCED_MACHINE_FRAME.get())
+                .add(BlockRegistry.ULTIMATE_MACHINE_FRAME.get())
+                .add(BlockRegistry.HEALER.get());
+        tag(MachineTags.NEEDS_WRENCH)
+                .add(BlockRegistry.BASIC_MACHINE_FRAME.get())
+                .add(BlockRegistry.INTERMEDIATE_MACHINE_FRAME.get())
+                .add(BlockRegistry.ADVANCED_MACHINE_FRAME.get())
+                .add(BlockRegistry.ULTIMATE_MACHINE_FRAME.get())
+                .add(BlockRegistry.HEALER.get());
     }
 
     @Override
