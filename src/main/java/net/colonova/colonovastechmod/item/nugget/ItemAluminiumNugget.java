@@ -1,10 +1,10 @@
 package net.colonova.colonovastechmod.item.nugget;
 
-import net.colonova.colonovastechmod.util.Reference;
+import net.colonova.colonovascore.api.item.ItemBase;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -12,13 +12,11 @@ import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ItemAluminiumNugget extends Item
+public class ItemAluminiumNugget extends ItemBase
 {
-    public ItemAluminiumNugget()
+    public ItemAluminiumNugget(CreativeModeTab tab, int stackSize, boolean isVisible)
     {
-        super(new Item.Properties()
-                .tab(Reference.CREATIVE_TAB_ITEMS)
-                .stacksTo(64));
+        super(tab, stackSize, isVisible);
     }
 
     @Override
