@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:ultimate_stirling_generator"
+        }
+      ],
+      "name": "ultimate_stirling_generator",
+      "rolls": 1.0
+    }
+  ]
+}

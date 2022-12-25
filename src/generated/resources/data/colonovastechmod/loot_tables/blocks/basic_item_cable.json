@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:basic_item_cable"
+        }
+      ],
+      "name": "basic_item_cable",
+      "rolls": 1.0
+    }
+  ]
+}

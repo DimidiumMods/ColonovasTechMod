@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:advanced_spikes"
+        }
+      ],
+      "name": "advanced_spikes",
+      "rolls": 1.0
+    }
+  ]
+}

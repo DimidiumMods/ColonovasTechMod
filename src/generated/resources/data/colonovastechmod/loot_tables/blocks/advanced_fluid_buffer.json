@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:advanced_fluid_buffer"
+        }
+      ],
+      "name": "advanced_fluid_buffer",
+      "rolls": 1.0
+    }
+  ]
+}

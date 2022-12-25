@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:void_portal"
+        }
+      ],
+      "name": "void_portal",
+      "rolls": 1.0
+    }
+  ]
+}

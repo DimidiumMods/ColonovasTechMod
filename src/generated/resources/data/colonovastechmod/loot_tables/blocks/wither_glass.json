@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:wither_glass"
+        }
+      ],
+      "name": "wither_glass",
+      "rolls": 1.0
+    }
+  ]
+}

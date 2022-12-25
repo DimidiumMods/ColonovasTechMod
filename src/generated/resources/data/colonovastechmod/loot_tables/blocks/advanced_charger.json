@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:advanced_charger"
+        }
+      ],
+      "name": "advanced_charger",
+      "rolls": 1.0
+    }
+  ]
+}

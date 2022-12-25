@@ -1,9 +1,14 @@
 /*
-package net.colonnova.colonovastechmod.block.machine;
+package net.colonova.colonovastechmod.block.machine;
 
+import net.colonova.colonovascore.api.block.BlockBase;
+import net.colonova.colonovastechmod.block.IMachineBlock;
+import net.colonova.colonovastechmod.util.MachineType;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -27,28 +32,32 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-@SuppressWarnings("deprecated")
-public class BlockFabricatorMachine extends BlockBase implements IWrenchable, EntityBlock
-{
-    private static final TextComponent CONTAINER_TITLE = new TranslationTextComponent("container.repair");
+import java.awt.*;
 
-    public BlockFabricatorMachine()
+@SuppressWarnings("deprecated")
+public class BlockFabricator extends BlockBase implements IMachineBlock, EntityBlock
+{
+    private static final MutableComponent CONTAINER_TITLE = Component.translatable("container.repair");
+    private final MachineType machineType;
+
+    public BlockFabricator(MachineType machineType)
     {
         super(Material.HEAVY_METAL, 10.0F, 100.0F, SoundType.METAL);
+        this.machineType = machineType;
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState)
     {
-        return new BlockEntityFabricatorMachine(blockPos, blockState);
+        return new BlockEntityFabricator(blockPos, blockState);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState, BlockEntityType<T> blockEntityType)
     {
-        return (level1, pos, state1, be) -> BlockEntityFabricatorMachine.tick(level1, pos, state1, blockEntityType);
+        return (level1, pos, state1, be) -> BlockEntityFabricator.tick(level1, pos, state1, blockEntityType);
     }
 
     @Override
@@ -92,7 +101,7 @@ public class BlockFabricatorMachine extends BlockBase implements IWrenchable, En
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult)
     {
-        final BlockEntityFabricatorMachine be = (BlockEntityFabricatorMachine) level.getBlockEntity(blockPos);
+        final BlockEntityFabricator be = (BlockEntityFabricator) level.getBlockEntity(blockPos);
 
         if(be != null)
         {
@@ -109,9 +118,16 @@ public class BlockFabricatorMachine extends BlockBase implements IWrenchable, En
 
         else
         {
-            player.sendMessage(new TextComponent("Error").withStyle(ChatFormatting.DARK_RED), null);
+            player.sendSystemMessage(Component.literal("Error").withStyle(ChatFormatting.DARK_RED));
         }
 
         return super.use(blockState, level, blockPos, player, interactionHand, blockHitResult);
     }
-}*/
+
+    @Override
+    public MachineType getMachineType(MachineType type)
+    {
+        return machineType;
+    }
+}
+*/

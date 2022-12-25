@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colonovastechmod:village_locator"
+        }
+      ],
+      "name": "villager_locator",
+      "rolls": 1.0
+    }
+  ]
+}
