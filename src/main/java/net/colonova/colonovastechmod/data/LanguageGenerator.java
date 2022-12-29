@@ -1,7 +1,6 @@
 package net.colonova.colonovastechmod.data;
 
-import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
-import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
+import net.colonova.colonovastechmod.handler.registry.*;
 import net.colonova.colonovastechmod.util.Reference;
 
 import net.minecraft.data.DataGenerator;
@@ -351,5 +350,13 @@ public class LanguageGenerator extends LanguageProvider
 
         add("messages.colonovastechmod.item.ring.activated", "Ring Activated!");
         add("messages.colonovastechmod.item.ring.deactivated", "Ring deactivated!");
+
+        add(EffectRegistry.BREEDING.get(), "Breeding");
+        add(EffectRegistry.ENTITY_PULLER.get(), "Entity Puller");
+        add(EffectRegistry.FLIGHT.get(), "Entity Puller");
+        add(EffectRegistry.FREEZE.get(), "Entity Puller");
+        add(EffectRegistry.GREEN_THUMB.get(), "Green Thumb");
+        add(EffectRegistry.MAGNETIZATION.get(), "Magnetization");
+        add(EffectRegistry.STEP_ASSIST.get(), "Step Assist");
     }
 }

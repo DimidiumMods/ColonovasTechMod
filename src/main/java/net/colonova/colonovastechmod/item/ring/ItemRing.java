@@ -2,6 +2,7 @@ package net.colonova.colonovastechmod.item.ring;
 
 import net.colonova.colonovascore.api.energy.EnergyAction;
 import net.colonova.colonovascore.api.energy.item.PoweredItemBase;
+import net.colonova.colonovastechmod.handler.registry.EffectRegistry;
 import net.colonova.colonovastechmod.util.IRingItem;
 
 import net.colonova.colonovastechmod.util.Reference;
@@ -104,6 +105,60 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     }
                 }
 
+                case "basic_breeding_ring", "intermediate_breeding_ring", "advanced_breeding_ring", "ultimate_breeding_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(EffectRegistry.BREEDING.get(), strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_entity_puller_ring", "intermediate_entity_puller_ring", "advanced_entity_puller_ring", "ultimate_entity_puller_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(EffectRegistry.ENTITY_PULLER.get(), strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_fire_ring", "intermediate_fire_ring", "advanced_fire_ring", "ultimate_fire_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(MobEffects.FIRE_RESISTANCE, strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_flight_ring", "intermediate_flight_ring", "advanced_flight_ring", "ultimate_flight_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(EffectRegistry.FLIGHT.get(), strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_freeze_ring", "intermediate_freeze_ring", "advanced_freeze_ring", "ultimate_freeze_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(EffectRegistry.FREEZE.get(), strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_green_thumb_ring", "intermediate_green_thumb_ring", "advanced_green_thumb_ring", "ultimate_thumb_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(EffectRegistry.GREEN_THUMB.get(), strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
                 case "basic_haste_ring", "intermediate_haste_ring", "advanced_haste_ring", "ultimate_haste_ring" ->
                 {
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
@@ -122,11 +177,47 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     }
                 }
 
+                case "basic_magnetization_ring", "intermediate_magnetization_ring", "advanced_magnetization_ring", "ultimate_magnetization_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(EffectRegistry.MAGNETIZATION.get(), strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_regeneration_ring", "intermediate_regeneration_ring", "advanced_regeneration_ring", "ultimate_regeneration_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(MobEffects.REGENERATION, strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
                 case "basic_resistance_ring", "intermediate_resistance_ring", "advanced_resistance_ring", "ultimate_resistance_ring" ->
                 {
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.DAMAGE_RESISTANCE, strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_saturation_ring", "intermediate_saturation_ring", "advanced_saturation_ring", "ultimate_saturation_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(MobEffects.SATURATION, strength, duration));
+                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+                    }
+                }
+
+                case "basic_step_assist_ring", "intermediate_step_assist_ring", "advanced_step_assist_ring", "ultimate_step_assist_ring" ->
+                {
+                    if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
+                    {
+                        player.addEffect(applyEffect(EffectRegistry.STEP_ASSIST.get(), strength, duration));
                         extractFE(stack, useCost, EnergyAction.EXECUTE);
                     }
                 }
