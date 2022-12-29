@@ -4,6 +4,7 @@ import net.colonova.colonovascore.api.energy.EnergyAction;
 import net.colonova.colonovascore.api.energy.item.PoweredItemBase;
 import net.colonova.colonovastechmod.util.IRingItem;
 
+import net.colonova.colonovastechmod.util.Reference;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -73,13 +74,13 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                 if(!item.getOrCreateTag().getBoolean("activated"))
                 {
                     item.getOrCreateTag().putBoolean("activated", true);
-                    player.sendSystemMessage(Component.translatable("messages.item.ring.activated").withStyle(ChatFormatting.GREEN));
+                    player.sendSystemMessage(Component.translatable("messages." + Reference.MOD_ID + ".item.ring.activated").withStyle(ChatFormatting.GREEN));
                 }
 
                 else
                 {
                     item.getOrCreateTag().putBoolean("activated", false);
-                    player.sendSystemMessage(Component.translatable("messages.item.ring.deactivated").withStyle(ChatFormatting.RED));
+                    player.sendSystemMessage(Component.translatable("messages." + Reference.MOD_ID + ".item.ring.deactivated").withStyle(ChatFormatting.RED));
                 }
             }
         }
