@@ -4,8 +4,8 @@ import net.colonova.colonovascore.api.energy.EnergyAction;
 import net.colonova.colonovascore.api.energy.item.PoweredItemBase;
 import net.colonova.colonovastechmod.handler.registry.EffectRegistry;
 import net.colonova.colonovastechmod.util.IRingItem;
-
 import net.colonova.colonovastechmod.util.Reference;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -101,7 +101,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.ABSORPTION, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -110,7 +114,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(EffectRegistry.BREEDING.get(), strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -119,7 +127,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(EffectRegistry.ENTITY_PULLER.get(), strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -128,7 +140,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.FIRE_RESISTANCE, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -137,7 +153,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(EffectRegistry.FLIGHT.get(), strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -146,7 +166,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(EffectRegistry.FREEZE.get(), strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -155,7 +179,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(EffectRegistry.GREEN_THUMB.get(), strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -164,7 +192,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.DIG_SPEED, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -173,7 +205,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.HEALTH_BOOST, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -182,7 +218,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(EffectRegistry.MAGNETIZATION.get(), strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -191,7 +231,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.REGENERATION, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -200,7 +244,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.DAMAGE_RESISTANCE, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -209,7 +257,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.SATURATION, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -218,7 +270,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(EffectRegistry.STEP_ASSIST.get(), strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
 
@@ -228,7 +284,11 @@ public class ItemRing extends PoweredItemBase implements IRingItem
                     if (getCurrentFE(stack) >= useCost && stack.getOrCreateTag().getBoolean("activated"))
                     {
                         player.addEffect(applyEffect(MobEffects.DAMAGE_BOOST, strength, duration));
-                        extractFE(stack, useCost, EnergyAction.EXECUTE);
+
+                        if(!player.isCreative())
+                        {
+                            extractFE(stack, useCost, EnergyAction.EXECUTE);
+                        }
                     }
                 }
             }
