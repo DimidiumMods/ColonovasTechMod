@@ -1,7 +1,6 @@
 package net.colonova.colonovastechmod.data;
 
-import net.colonova.colonovastechmod.handler.registry.BlockRegistry;
-import net.colonova.colonovastechmod.handler.registry.ItemRegistry;
+import net.colonova.colonovastechmod.handler.registry.*;
 import net.colonova.colonovastechmod.util.Reference;
 
 import net.minecraft.data.DataGenerator;
@@ -17,8 +16,8 @@ public class LanguageGenerator extends LanguageProvider
     @Override
     protected void addTranslations()
     {
-        add("itemGroup." + Reference.MOD_ID + ".tab.blocks", "ColonovasTechMod: Blocks");
-        add("itemGroup." + Reference.MOD_ID + ".tab.items", "ColonovasTechMod: Items");
+        add("itemGroup." + Reference.MOD_ID + ".tab.blocks", "Colonovas Tech Mod: Blocks");
+        add("itemGroup." + Reference.MOD_ID + ".tab.items", "Colonovas Tech Mod: Items");
 
         add(BlockRegistry.ALUMINIUM_ORE.get(), "Aluminium Ore");
         add(BlockRegistry.COPPER_ORE.get(), "Copper Ore");
@@ -287,5 +286,77 @@ public class LanguageGenerator extends LanguageProvider
          add(BlockRegistry.ADVANCED_TNT_GENERATOR.get(),"TNT Generator");
          add(BlockRegistry.ULTIMATE_TNT_GENERATOR.get(),"TNT Generator");
          add(BlockRegistry.TRADER.get(),"Trader");
+         
+         add(ItemRegistry.BASIC_ABSORPTION_RING.get(), "Basic Absorption Ring");
+         add(ItemRegistry.INTERMEDIATE_ABSORPTION_RING.get(), "Intermediate Absorption Ring");
+         add(ItemRegistry.ADVANCED_ABSORPTION_RING.get(), "Advanced Absorption Ring");
+         add(ItemRegistry.ULTIMATE_ABSORPTION_RING.get(), "Ultimate Absorption Ring");
+         add(ItemRegistry.BASIC_BREEDING_RING.get(), "Basic Breeding Ring");
+         add(ItemRegistry.INTERMEDIATE_BREEDING_RING.get(), "Intermediate Breeding Ring");
+         add(ItemRegistry.ADVANCED_BREEDING_RING.get(), "Advanced Breeding Ring");
+         add(ItemRegistry.ULTIMATE_BREEDING_RING.get(), "Ultimate Breeding Ring");
+         add(ItemRegistry.BASIC_ENTITY_PULLER_RING.get(), "Basic Entity Puller Ring");
+         add(ItemRegistry.INTERMEDIATE_ENTITY_PULLER_RING.get(), "Intermediate Entity Puller Ring");
+         add(ItemRegistry.ADVANCED_ENTITY_PULLER_RING.get(), "Advanced Entity Puller Ring");
+         add(ItemRegistry.ULTIMATE_ENTITY_PULLER_RING.get(), "Ultimate Entity Puller Ring");
+         add(ItemRegistry.BASIC_FIRE_RING.get(), "Basic Fire Resistance Ring");
+         add(ItemRegistry.INTERMEDIATE_FIRE_RING.get(), "Intermediate Fire Resistance Ring");
+         add(ItemRegistry.ADVANCED_FIRE_RING.get(), "Advanced Fire Resistance Ring");
+         add(ItemRegistry.ULTIMATE_FIRE_RING.get(), "Ultimate Fire Resistance Ring");
+         add(ItemRegistry.BASIC_FLIGHT_RING.get(), "Basic Flight Ring");
+         add(ItemRegistry.INTERMEDIATE_FLIGHT_RING.get(), "Intermediate Flight Ring");
+         add(ItemRegistry.ADVANCED_FLIGHT_RING.get(), "Advanced Flight Ring");
+         add(ItemRegistry.ULTIMATE_FLIGHT_RING.get(), "Ultimate Flight Ring");
+         add(ItemRegistry.BASIC_FREEZE_RING.get(), "Basic Freeze Ring");
+         add(ItemRegistry.INTERMEDIATE_FREEZE_RING.get(), "Intermediate Freeze Ring");
+         add(ItemRegistry.ADVANCED_FREEZE_RING.get(), "Advanced Freeze Ring");
+         add(ItemRegistry.ULTIMATE_FREEZE_RING.get(), "Ultimate Freeze Ring");
+         add(ItemRegistry.BASIC_GREEN_THUMB_RING.get(), "Basic Green Thumb Ring");
+         add(ItemRegistry.INTERMEDIATE_GREEN_THUMB_RING.get(), "Intermediate Green Thumb Ring");
+         add(ItemRegistry.ADVANCED_GREEN_THUMB_RING.get(), "Advanced Green Thumb Ring");
+         add(ItemRegistry.ULTIMATE_GREEN_THUMB_RING.get(), "Ultimate Green Thumb Ring");
+         add(ItemRegistry.BASIC_HASTE_RING.get(), "Basic Haste Ring");
+         add(ItemRegistry.INTERMEDIATE_HASTE_RING.get(), "Intermediate Haste Ring");
+         add(ItemRegistry.ADVANCED_HASTE_RING.get(), "Advanced Haste Ring");
+         add(ItemRegistry.ULTIMATE_HASTE_RING.get(), "Ultimate Haste Ring");
+         add(ItemRegistry.BASIC_HEALTH_RING.get(), "Basic Health Boost Ring");
+         add(ItemRegistry.INTERMEDIATE_HEALTH_RING.get(), "Intermediate Health Boost Ring");
+         add(ItemRegistry.ADVANCED_HEALTH_RING.get(), "Advanced Health Boost Ring");
+         add(ItemRegistry.ULTIMATE_HEALTH_RING.get(), "Ultimate Health Boost Ring");
+         add(ItemRegistry.BASIC_MAGNETIZATION_RING.get(), "Basic Magnetization Ring");
+         add(ItemRegistry.INTERMEDIATE_MAGNETIZATION_RING.get(), "Intermediate Magnetization Ring");
+         add(ItemRegistry.ADVANCED_MAGNETIZATION_RING.get(), "Advanced Magnetization Ring");
+         add(ItemRegistry.ULTIMATE_MAGNETIZATION_RING.get(), "Ultimate Magnetization Ring");
+         add(ItemRegistry.BASIC_REGENERATION_RING.get(), "Basic Regeneration Ring");
+         add(ItemRegistry.INTERMEDIATE_REGENERATION_RING.get(), "Intermediate Regeneration Ring");
+         add(ItemRegistry.ADVANCED_REGENERATION_RING.get(), "Advanced Regeneration Ring");
+         add(ItemRegistry.ULTIMATE_REGENERATION_RING.get(), "Ultimate Regeneration Ring");
+         add(ItemRegistry.BASIC_RESISTANCE_RING.get(), "Basic Resistance Ring");
+         add(ItemRegistry.INTERMEDIATE_RESISTANCE_RING.get(), "Intermediate Resistance Ring");
+         add(ItemRegistry.ADVANCED_RESISTANCE_RING.get(), "Advanced Resistance Ring");
+         add(ItemRegistry.ULTIMATE_RESISTANCE_RING.get(), "Ultimate Resistance Ring");
+         add(ItemRegistry.BASIC_SATURATION_RING.get(), "Basic Saturation Ring");
+         add(ItemRegistry.INTERMEDIATE_SATURATION_RING.get(), "Intermediate Saturation Ring");
+         add(ItemRegistry.ADVANCED_SATURATION_RING.get(), "Advanced Saturation Ring");
+         add(ItemRegistry.ULTIMATE_SATURATION_RING.get(), "Ultimate Saturation Ring");
+         add(ItemRegistry.BASIC_STEP_ASSIST_RING.get(), "Basic Step Assist Ring");
+         add(ItemRegistry.INTERMEDIATE_STEP_ASSIST_RING.get(), "Intermediate Step Assist Ring");
+         add(ItemRegistry.ADVANCED_STEP_ASSIST_RING.get(), "Advanced Step Assist Ring");
+         add(ItemRegistry.ULTIMATE_STEP_ASSIST_RING.get(), "Ultimate Step Assist Ring");
+         add(ItemRegistry.BASIC_STRENGTH_RING.get(), "Basic Strength Ring");
+         add(ItemRegistry.INTERMEDIATE_STRENGTH_RING.get(), "Intermediate Strength Ring");
+         add(ItemRegistry.ADVANCED_STRENGTH_RING.get(), "Advanced Strength Ring");
+         add(ItemRegistry.ULTIMATE_STRENGTH_RING.get(), "Ultimate Strength Ring");
+
+        add("messages.colonovastechmod.item.ring.activated", "Ring Activated!");
+        add("messages.colonovastechmod.item.ring.deactivated", "Ring deactivated!");
+
+        add(EffectRegistry.BREEDING.get(), "Breeding");
+        add(EffectRegistry.ENTITY_PULLER.get(), "Entity Puller");
+        add(EffectRegistry.FLIGHT.get(), "Entity Puller");
+        add(EffectRegistry.FREEZE.get(), "Entity Puller");
+        add(EffectRegistry.GREEN_THUMB.get(), "Green Thumb");
+        add(EffectRegistry.MAGNETIZATION.get(), "Magnetization");
+        add(EffectRegistry.STEP_ASSIST.get(), "Step Assist");
     }
 }
