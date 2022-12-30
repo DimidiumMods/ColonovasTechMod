@@ -46,6 +46,9 @@ public class ColonovasTechMod
         BlockEntityRegistry.registerBlockEntities();
         ContainerRegistry.registerContainers();
 
+        DimensionRegistry.registerDimensionTypes();
+        BiomeRegistry.registerDimensionTypes();
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);

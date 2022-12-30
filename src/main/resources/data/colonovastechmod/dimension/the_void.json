@@ -1,0 +1,13 @@
+{
+  "type": "colonovastechmod:the_void",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "colonovastechmod:the_void",
+      "lakes": false,
+      "features": false,
+      "layers": [],
+      "structure_overrides": []
+    }
+  }
+}
